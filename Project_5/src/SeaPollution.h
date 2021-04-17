@@ -11,6 +11,7 @@
 #ifndef SEAPOLLUTION_H
 #define SEAPOLLUTION_H
 #include <string>
+#include <iostream>
 
 //max amount of large bodies of water
 const int MAX = 5;
@@ -64,6 +65,9 @@ class SeaPollution {
         //overloaded equivalence operator
         bool operator==(const SeaPollution& rhs);
 
+        //print function
+        void print() const;
+
         //getters
         const std::string getName() const;
         const float getSurfaceArea() const;
@@ -77,6 +81,9 @@ class SeaPollution {
         void setSalinityLevel(const float);
         
 };
+
+        //overloaded << operator
+        std::ostream& operator<<(std::ostream&, const SeaPollution&);
 
 
 

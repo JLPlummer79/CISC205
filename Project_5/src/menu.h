@@ -15,5 +15,15 @@
 //function declarations for menu.cpp
 void menu(SeaPollution*);
 
+void enterSea(SeaPollution*, int&, bool);
+
+SeaPollution searchSeas(SeaPollution*, int&, std::string);
+
+void searchSeasPrint(SeaPollution*, int&, bool);
+
+void compareSeas(SeaPollution*, int&, bool);
+
+void arithmeticSeas(SeaPollution*, int&, bool);
+
 
 #endif

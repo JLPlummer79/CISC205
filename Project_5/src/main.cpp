@@ -1,5 +1,6 @@
 #include <iostream>
 #include "SeaPollution.h"
+#include "menu.h"
 
 int main() {
 
@@ -54,7 +55,7 @@ int main() {
     else { 
         std::cout << test1.getName() << " is less than " << test.getName() << '\n'; 
     }
-
+/*
     SeaPollution test3;
     test3 = test - test1;
     std::cout << "Overloaded subtraction operator test:\n"
@@ -70,6 +71,8 @@ int main() {
     << "Surface Area: " << test4.getSurfaceArea() << '\n'
     << "Pollution Area: " << test4.getPollutionArea() << '\n'
     << "Salinity: " << test4.getSalinityLevel() << '\n';
+*/
+    menu(seas);
     
     
 

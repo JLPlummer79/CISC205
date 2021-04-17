@@ -20,7 +20,7 @@ int SeaPollution::id = 0;
 //default constructor
 SeaPollution::SeaPollution() {
 
-    name = "Pacific";
+    name = "Zzyzx";
     surfaceArea = 256.25;
     pollutionArea = 251.25;
     salinityLevel = 50.0;
@@ -193,6 +193,7 @@ SeaPollution::SeaPollution(SeaPollution &&other) noexcept{
 }
 //move assignment operator 
 SeaPollution& SeaPollution::operator=(SeaPollution &&other) noexcept {
+    std::cout << "In move assignment operator\n";
     name = std::move(other.name); 
     surfaceArea = std::move(other.surfaceArea);
     pollutionArea = std::move(other.pollutionArea);
@@ -210,7 +211,8 @@ SeaPollution::SeaPollution(const SeaPollution& other) {
 }
 
 //copy assignment operator
-SeaPollution& SeaPollution::operator=(const SeaPollution &other){
+SeaPollution& SeaPollution::operator=(const SeaPollution &other) {
+    std::cout << "In copy assignment operator\n";
     name = other.name;
     surfaceArea = other.surfaceArea;
     pollutionArea = other.pollutionArea;
@@ -222,9 +224,11 @@ SeaPollution& SeaPollution::operator=(const SeaPollution &other){
 SeaPollution SeaPollution::operator+(const SeaPollution &rhs) {
     SeaPollution temp;
 
-    temp.surfaceArea = this->getSurfaceArea() + rhs.getSurfaceArea();
+    //temp.surfaceArea = this->getSurfaceArea() + rhs.getSurfaceArea();
+    temp.setSurfaceArea(this->getSurfaceArea() + rhs.getSurfaceArea());
     
-    temp.name = "temporary-" + std::to_string(id);
+    //temp.name = "temporary-" + std::to_string(id);
+    temp.setName("temporary-" + std::to_string(id));
     return temp;
 
 }
@@ -251,13 +255,15 @@ bool SeaPollution::operator<(const SeaPollution& rhs) {
 SeaPollution SeaPollution::operator-(const SeaPollution& rhs) {
     SeaPollution temp;
 
-    temp.surfaceArea = this->getSurfaceArea() - rhs.getSurfaceArea();
-    temp.name = "temporary-" + std::to_string(id);
+    //temp.surfaceArea = this->getSurfaceArea() - rhs.getSurfaceArea();
+    temp.setSurfaceArea(this->getSurfaceArea() - rhs.getSurfaceArea());
+    //temp.name = "temporary-" + std::to_string(id);
+    temp.setName("temporary-" + std::to_string(id));
     
     //object comparison?  or is this okay?
-     if(temp.surfaceArea < 0) {
+     if(temp.surfaceArea <= 0) {
         std::cout << "Big problems, cannot have a negative "
-        << "surface area!\n"
+        << "or zero surface area!\n"
         << "Exiting Program.\n";
         exit(EXIT_FAILURE);
     }
@@ -272,6 +278,27 @@ bool SeaPollution::operator==(const SeaPollution& rhs){
         return true;
     } 
     return false;
+}
+
+//overloaded stream insertion operator
+std::ostream& operator<<(std::ostream& out, const SeaPollution& obj){
+    return out << "\nSea Name: " << obj.getName() << 
+    "\nSurface Area: " << obj.getSurfaceArea() << " square miles" <<
+    "\nPollution Area: " << obj.getPollutionArea() << " square miles" <<
+    "\nSalinity: " << obj.getSalinityLevel() << " %.\n";
+}
+//*******************************************************
+// name: print
+// called by:
+// passed: nothing
+// returns: nothing
+// The print function calls std::cout & the overloaded  *
+// stream insertion operator on the deferenced this     *
+// pointer (that points to the current object)          *
+//*******************************************************
+void SeaPollution::print() const {
+    
+    std::cout << *this;    
 }
 
 //*******************************************************

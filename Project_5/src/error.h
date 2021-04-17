@@ -13,9 +13,17 @@
 #include <string>
 
 //function declarations for error.cpp
-int checkSingleChar(std::string);
+int checkSingleInt(std::string);
+
+char checkSingleChar(std::string);
 
 int checkIfInteger(const char&);
+
+std::string validateString(std::string);
+
+bool checkValidInteger(const std::string);
+
+float checkValidFloat(std::string);
 
 
 
