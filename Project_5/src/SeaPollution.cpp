@@ -13,9 +13,10 @@
 #include <utility>
 #include <limits>
 #include <string>
+#include <iomanip>
 
 //actual declaration of static member variable
-int SeaPollution::id = 0; 
+int SeaPollution::id{0}; 
 
 //default constructor
 SeaPollution::SeaPollution() {
@@ -42,7 +43,8 @@ SeaPollution::SeaPollution(std::string n, float sa, float pa, float sl) {
 //getters
 //*******************************************************
 // name: getName
-// called by:
+// called by: searchSeas, 
+// called by: overloaded stream insertion operator
 // passed: nothing
 // returns: const std::string
 // The getName function returns the value of the member *
@@ -54,7 +56,11 @@ const std::string SeaPollution::getName() const {
 
 //*******************************************************
 // name: getSurfaceArea
-// called by:
+// called by: overloaded addition operator
+// called by: overloaded greater than operator
+// called by: overloaded less than operator
+// called by: overloaded  equivalence operator
+// called by: overloaded stream insertion operator
 // passed: nothing
 // returns: const float
 // The getSurfaceArea function return the value of the  *
@@ -66,7 +72,7 @@ const float SeaPollution::getSurfaceArea() const {
 
 //*******************************************************
 // name: getPollutionArea
-// called by:
+// called by: overloaded stream insertion operator
 // passed: nothing
 // returns: const float
 // The getPollutionArea function returns the value of   *
@@ -78,7 +84,7 @@ const float SeaPollution::getPollutionArea() const {
 
 //*******************************************************
 // name: getSalinityLevel
-// called by:
+// called by: overloaded stream insertion operator
 // passed: nothing
 // returns: const float
 // The getSalinityLevel function returns the value of   *
@@ -89,7 +95,8 @@ const float SeaPollution::getSalinityLevel() const {
 }
 //*******************************************************
 // name: setName
-// called by:
+// called by: enterSea, overloaded addition operator
+// called by: overloaded subtraction operator
 // passed: const std::string
 // returns: nothing
 // The setName function first checks if the argument is *
@@ -113,7 +120,7 @@ void SeaPollution::setName(const std::string n) {
 
 //*******************************************************
 // name: setPollutionArea
-// called by:
+// called by: enterSea
 // passed: const float
 // returns: nothing
 // The seaPollutionArea function first checks if the    *
@@ -138,7 +145,8 @@ void SeaPollution::setPollutionArea(const float pa) {
 
 //*******************************************************
 // name: setSurfaceArea
-// called by:
+// called by: enterSea, overloaded addition operator
+// called by: overloaded subtraction operator
 // passed: const float
 // returns: nothing
 // The setSurfaceArea function first checks if the      *
@@ -164,7 +172,7 @@ void SeaPollution::setSurfaceArea(const float sa) {
 
 //*******************************************************
 // name: setSalinityLevel
-// called by: 
+// called by: enterSea
 // passed: const float
 // returns: nothing
 // The setSalinityLevel function first checks if the    *
@@ -193,11 +201,15 @@ SeaPollution::SeaPollution(SeaPollution &&other) noexcept{
 }
 //move assignment operator 
 SeaPollution& SeaPollution::operator=(SeaPollution &&other) noexcept {
-    std::cout << "In move assignment operator\n";
-    name = std::move(other.name); 
-    surfaceArea = std::move(other.surfaceArea);
-    pollutionArea = std::move(other.pollutionArea);
-    salinityLevel = std::move(other.salinityLevel);
+    //std::cout << "In move assignment operator\n";
+    //name = std::move(other.name);
+    this->setName(std::move(other.getName())); 
+    //surfaceArea = std::move(other.surfaceArea);
+    this->setSurfaceArea(std::move(other.getSurfaceArea()));
+    //pollutionArea = std::move(other.pollutionArea);
+    this->setPollutionArea(std::move(other.getPollutionArea()));
+    //salinityLevel = std::move(other.salinityLevel);
+    this->setSalinityLevel(std::move(other.getSalinityLevel()));
 
     return *this;
 }
@@ -212,11 +224,15 @@ SeaPollution::SeaPollution(const SeaPollution& other) {
 
 //copy assignment operator
 SeaPollution& SeaPollution::operator=(const SeaPollution &other) {
-    std::cout << "In copy assignment operator\n";
-    name = other.name;
-    surfaceArea = other.surfaceArea;
-    pollutionArea = other.pollutionArea;
-    salinityLevel = other.salinityLevel;
+    //std::cout << "In copy assignment operator\n";
+    //name = other.name;
+    this->setName(other.getName());
+    //surfaceArea = other.surfaceArea;
+    this->setSurfaceArea(other.getSurfaceArea());
+    //pollutionArea = other.pollutionArea;
+    this->setPollutionArea(other.getPollutionArea());
+    //salinityLevel = other.salinityLevel;
+    this->setSalinityLevel(other.getSalinityLevel());
 
     return *this;
 }
@@ -224,17 +240,17 @@ SeaPollution& SeaPollution::operator=(const SeaPollution &other) {
 SeaPollution SeaPollution::operator+(const SeaPollution &rhs) {
     SeaPollution temp;
 
-    //temp.surfaceArea = this->getSurfaceArea() + rhs.getSurfaceArea();
     temp.setSurfaceArea(this->getSurfaceArea() + rhs.getSurfaceArea());
-    
-    //temp.name = "temporary-" + std::to_string(id);
+
     temp.setName("temporary-" + std::to_string(id));
+
+    //return newly created object
     return temp;
 
 }
 //overloaded operator > 
 bool SeaPollution::operator>(const SeaPollution& rhs){
-    if(this->surfaceArea > rhs.getSurfaceArea()){
+    if(this->getSurfaceArea() > rhs.getSurfaceArea()){
         return true;
     }
     
@@ -255,19 +271,11 @@ bool SeaPollution::operator<(const SeaPollution& rhs) {
 SeaPollution SeaPollution::operator-(const SeaPollution& rhs) {
     SeaPollution temp;
 
-    //temp.surfaceArea = this->getSurfaceArea() - rhs.getSurfaceArea();
     temp.setSurfaceArea(this->getSurfaceArea() - rhs.getSurfaceArea());
-    //temp.name = "temporary-" + std::to_string(id);
-    temp.setName("temporary-" + std::to_string(id));
     
-    //object comparison?  or is this okay?
-     if(temp.surfaceArea <= 0) {
-        std::cout << "Big problems, cannot have a negative "
-        << "or zero surface area!\n"
-        << "Exiting Program.\n";
-        exit(EXIT_FAILURE);
-    }
+    temp.setName("temporary-" + std::to_string(id));
 
+    //return newly created object
     return temp;
 }
 
@@ -289,16 +297,20 @@ std::ostream& operator<<(std::ostream& out, const SeaPollution& obj){
 }
 //*******************************************************
 // name: print
-// called by:
+// called by: searchSeasPrint, compareSeas
+// called by: arithmeticSeas, printAllSeas
 // passed: nothing
 // returns: nothing
 // The print function calls std::cout & the overloaded  *
 // stream insertion operator on the deferenced this     *
 // pointer (that points to the current object)          *
+// printing the object using precision(2) formatting    *
 //*******************************************************
 void SeaPollution::print() const {
-    
-    std::cout << *this;    
+
+    std::cout << std::fixed 
+    << std::setprecision(2)
+    << *this;    
 }
 
 //*******************************************************

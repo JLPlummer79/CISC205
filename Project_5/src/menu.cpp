@@ -18,7 +18,9 @@
 // called by: main
 // passed: pointer to an array of SeaPollution objects
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The menu function prints the base menu, then prompts *
+// the user for input. Once that is validated, the input*
+// calls the appropirate function and performs an action*
 //*******************************************************
 void menu(SeaPollution* seas) {
     //holds user input 
@@ -28,11 +30,11 @@ void menu(SeaPollution* seas) {
     //will control on/off for high level validation
     bool validation = true;
     //tracks how many seas are in the array
-    int numSeas;
+    int numSeas = 0;
 
     while (choice != 7) {
         //main menu display
-        std::cout << "<---------------Main Menu---------------->\n";
+        std::cout << "\n<---------------Main Menu---------------->\n";
         std::cout << "1. Enter data for one sea.\n";
         std::cout << "2. Search for sea in system.\n";
         std::cout << "3. Compare two seas.\n";
@@ -66,14 +68,13 @@ void menu(SeaPollution* seas) {
             break;
 
             case 4:
-            //call combineSeas(SeaPollution*, int, bool) array, numSeas, validation on/off
-            std::cout << "Calling arithmeticSeas\n";
+            //call arithmeticSeas
             arithmeticSeas(seas, numSeas, validation);
             break;
 
             case 5:
-            //call printSeas(SeaPollution*, int) array, numSeas (no need for validation)
-            std::cout << "Calling printSeas\n";
+            //call printAllSeas
+            printAllSeas(seas, numSeas);
             break;
 
             case 6:
@@ -123,7 +124,7 @@ void enterSea(SeaPollution* seas, int& numSeas, bool validation) {
     }
 
     else {
-        std::cout << "Enter sea name: ";
+        std::cout << "\nEnter sea name: ";
         //get user input
         std::getline(std::cin, input);
 
@@ -151,13 +152,31 @@ void enterSea(SeaPollution* seas, int& numSeas, bool validation) {
         std::cout << "\nEnter pollution area of sea: ";
         //get user input
         std::getline(std::cin, input);
+
         if(validation == true) {
             //high level validation
             number = checkValidFloat(input);
         }
         else{
             number = stof(input);
-        }
+        } 
+        while(bow.getSurfaceArea() < number) {
+            std::cout << "Pollution area cannot "
+            << "exceed surface area of sea!"
+            << " Please re-enter pollution area"
+            << " number: ";
+            //get user input
+            std::getline(std::cin, input);
+
+            if(validation == true) {
+                //high level validation
+                number = checkValidFloat(input);
+            }
+            else{
+                number = stof(input);
+            } 
+        }//end while
+
         //set pollutionArea in new object
         bow.setPollutionArea(number);
 
@@ -173,6 +192,21 @@ void enterSea(SeaPollution* seas, int& numSeas, bool validation) {
         else {
             number = stof(input);
         }
+        while(number > 100) {
+            std::cout << "Percent salinity "
+            << "cannot exceed 100%! Please "
+            << "re-enter salinity number: ";
+            //get user input
+            std::getline(std::cin,input);
+            if(validation == true) {
+                //high level validation
+                number = checkValidFloat(input);
+            }
+            else{
+                number = stof(input);
+            } 
+        }//end while
+
         //set salinityLevel in new object
         bow.setSalinityLevel(number);
 
@@ -183,13 +217,16 @@ void enterSea(SeaPollution* seas, int& numSeas, bool validation) {
 
 //*******************************************************
 // name: searchSeas
-// called by:
+// called by: searchSeasPrint, compareSeas, arithmeticSeas
 // passed: a pointer to an array of objects, int&, 
 // passed: std::string
 // returns: SeaPollution object
-// The 'name' function 'what function does'             *
+// The searchSeas function iterates the arg seas and    *
+// compares it to the arg name.  The returned value is  *
+// 0-5 if it is valid, 7 if it is not valid             *
 //*******************************************************
-SeaPollution searchSeas(SeaPollution* seas, int& numSeas, std::string name) {
+int searchSeas(SeaPollution* seas, int& numSeas, std::string name) {
+    //holds found object
     SeaPollution blank;
 
     int index = 7;
@@ -200,13 +237,8 @@ SeaPollution searchSeas(SeaPollution* seas, int& numSeas, std::string name) {
             index = i;
         }
     }
-    if(index != 7) {
-        return seas[index];
-    }
-    
-    std::cout << name << " sea not found.\n";
-
-    return blank;
+    // return valid or invalid index
+    return index;    
     
 }//end searchSeas
 
@@ -216,52 +248,65 @@ SeaPollution searchSeas(SeaPollution* seas, int& numSeas, std::string name) {
 // passed: pointer to a array of SeaPollution objects
 // passed: int&, bool
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The searchSeasPrint function prompts the user for    *
+// input, verifies it (or not), passes it to the search *
+// -Seas function, and prints the object if found, an   *
+// error message if not found                           *
 //*******************************************************
 void searchSeasPrint(SeaPollution* seas, int& numSeas, bool validation) {
-    //will hold the return value from searchSeas
-    SeaPollution shell;
+    //will hold result from searchSeas
+    int seaIndex = 0;
 
     //hold user input
     std::string input;
 
+    //ensure array is populated
     if(numSeas <= 0) {
         std::cout << "No seas present in data structure!\n";
     }
 
     else {
-        std::cout << "Enter sea name: ";
+        std::cout << "\nEnter sea name: ";
         //get user input
         std::getline(std::cin, input);
 
-        //high level error checking, don't really need here but nice to be consistent
+        //high level error checking
          if(validation == true) {
             input = validateString(input);
         }
-        //assign the returned object to the 'shell'
-        shell = searchSeas(seas,numSeas, input);
+        //1-5 if the sea was found.  7 otherwise
+        seaIndex = searchSeas(seas,numSeas, input);
 
-        if(shell.getName() == "Zzyzx") {
+        if(seaIndex == 7) {
             std::cout << input << " sea not found.\n";
         }
         else {
-            shell.print();
+            seas[seaIndex].print();
         }
     }
 }//end searchSeasPrint
 
 //*******************************************************
 // name: compareSeas
-// called by:
+// called by: menu
 // passed: pointer to an array of objects, int&, bool
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The compareSeas function prompts the user for 2 seas *
+// vaidates the input, then searches for the seas. If   *
+// found, prompts the user to enter an operator.  After *
+// the input is validated, the overloaded operator >, <,*
+// or == is called to make a comparison.  Then the      *
+// result is printed in a readable format using the     *
+// print function and appropriate phrases (greater than)*
 //*******************************************************
 void compareSeas(SeaPollution* seas, int& numSeas, bool validation) {
+ 
+    //lhs & rhs will be assigned the SeaPollution objects from seas
+    //being compared
+    SeaPollution lhs, rhs;
 
-    //shell will hold the returned object for error checking, 
-    //lhs & rhs will have the comparison performed on them
-    SeaPollution shell, lhs, rhs;
+    //holds return value of searchSeas
+    int seaIndex = 0;
 
     //holds user input
     std::string input;
@@ -275,13 +320,14 @@ void compareSeas(SeaPollution* seas, int& numSeas, bool validation) {
     //will hold the operator entry
     char op = '$';
 
+    //ensure array is populated
     if(numSeas <= 0) {
         std::cout << "No members in array!\n";
     }
     else {
         //1st while gets the sea names
         while(flag == 0) {
-            std::cout << "Enter name of sea: ";
+            std::cout << "\nEnter name of sea: ";
 
             //get user input
             std::getline(std::cin, input);
@@ -292,20 +338,23 @@ void compareSeas(SeaPollution* seas, int& numSeas, bool validation) {
             }
 
             //search for user input
-            shell = searchSeas(seas, numSeas, input);
+            seaIndex = searchSeas(seas, numSeas, input);
 
-            if(shell.getName() == "Zzyzx") {
+            //sea was not found
+            if(seaIndex == 7) {
                 std::cout << input <<" sea not found."
                 << " Please re-enter the sea name.\n";
                 continue;
             }
             else {
+                //assign lhs the left side arg for comparison
                 if(count == 1) {
-                    lhs = shell;
+                    lhs = seas[seaIndex];
                     ++count;
                 }
+                //assign rhs the right side arg for comparison
                 else if(count == 2) {
-                    rhs = shell;
+                    rhs = seas[seaIndex];
                     flag = 1;
                     count = 0;
                 }
@@ -320,15 +369,15 @@ void compareSeas(SeaPollution* seas, int& numSeas, bool validation) {
             std::getline(std::cin, input);
 
             //validate user input
-            if(validation == true) {
                 op = checkSingleChar(input);
-            }
 
+            //select and perform operation based on user input
             switch(op) {
 
                 case '<':
-                     lhs.print();
-                    if(lhs < rhs) {
+                    divider();      //print divider for data presentation
+                     lhs.print();   //print left side object
+                    if(lhs < rhs) {     //print appropriate phrase
                         std::cout <<  
                         " is less than ";
                     }
@@ -336,13 +385,15 @@ void compareSeas(SeaPollution* seas, int& numSeas, bool validation) {
                         std::cout << 
                         " is not less than ";
                     }  
-                    rhs.print();
-                    flag = 0;
+                    rhs.print();     //print right side object
+                    divider();      //print divider for data presentation
+                    flag = 0;       //break while
                 break;
 
                 case '>':
-                    lhs.print();
-                    if(lhs > rhs){
+                    divider();      //print divider for data presentation
+                    lhs.print();    //print left side object
+                    if(lhs > rhs){      //print appropriate phrase
                         std::cout << 
                         " is greater than ";
                     }
@@ -350,13 +401,15 @@ void compareSeas(SeaPollution* seas, int& numSeas, bool validation) {
                         std::cout << 
                         " is not greater than ";
                     }  
-                    rhs.print();
-                    flag = 0;
+                    rhs.print();    //print right side object
+                    divider();      //print divider for data presentation
+                    flag = 0;       //break while
                 break;
 
                 case '=':
-                    lhs.print();
-                    if(lhs == rhs){
+                    divider();      //print divider for data presentation
+                    lhs.print();    //print left side object
+                    if(lhs == rhs){     //print appropriate phrase
                         std::cout <<
                         " is equal to ";
                     }
@@ -364,8 +417,9 @@ void compareSeas(SeaPollution* seas, int& numSeas, bool validation) {
                         std::cout <<
                         " is not equal to ";
                     } 
-                    rhs.print();
-                    flag = 0;
+                    rhs.print();    //print right side object
+                    divider();      //print divider for data presentation
+                    flag = 0;       //break while
                 break;
 
                 //error message 
@@ -385,15 +439,25 @@ void compareSeas(SeaPollution* seas, int& numSeas, bool validation) {
 
 //*******************************************************
 // name: arithmeticSeas
-// called by:
+// called by: menu
 // passed: pointer to an array of objects, int&, bool
 // returns: nothing
 // The arithmeticSeas function prompts the user to enter*
-// the name of a sea, *
+// the name of a sea, searchs for it and if found       *
+// assigns the data to a new object, if nor prints an   *
+// error message.  The step repeast, then prompts the   *
+// user for a appropriate operator, checks it, then     *
+// carries out the operation between the 2 objects.     *
+// If the result is valid, it prints.  If the result is *
+// zero or less an error message prints and the program *
+// terminates.                                          *
 //*******************************************************
 void arithmeticSeas(SeaPollution* seas, int& numSeas, bool validation) {
     // represent the objects to have operations performed on
     SeaPollution shell, lhs, rhs;
+
+    //holds the return value of searchSeas
+    int seaIndex = 0;
 
     //holds user input
     std::string input;
@@ -407,13 +471,14 @@ void arithmeticSeas(SeaPollution* seas, int& numSeas, bool validation) {
     //holds operator entry
     char op = '$';
 
+    //ensure array is populated
     if(numSeas <= 0) {
         std::cout << "No members in array!\n";
     }
     else {
         //1st while gets the sea names
         while(flag == 0) {
-            std::cout << "Enter name of sea: ";
+            std::cout << "\nEnter name of sea: ";
 
             //get user input
             std::getline(std::cin, input);
@@ -424,20 +489,23 @@ void arithmeticSeas(SeaPollution* seas, int& numSeas, bool validation) {
             }
 
             //search for user input
-            shell = searchSeas(seas, numSeas, input);
+            seaIndex = searchSeas(seas, numSeas, input);
 
-            if(shell.getName() == "Zzyzx") {
+            //sea was not found
+            if(seaIndex == 7) {
                 std::cout << input <<" sea not found."
                 << " Please re-enter the sea name.\n";
                 continue;
             }
             else {
+                //assign lhs the left side arg for operation
                 if(count == 1) {
-                    lhs = shell;
+                    lhs = seas[seaIndex];
                     ++count;
                 }
+                //assign rhs the right side arg for operation
                 else if(count == 2) {
-                    rhs = shell;
+                    rhs = seas[seaIndex];
                     flag = 1;
                     count = 0;
                 }
@@ -452,24 +520,28 @@ void arithmeticSeas(SeaPollution* seas, int& numSeas, bool validation) {
             std::getline(std::cin, input);
 
             //validate user input
-            if(validation == true) {
-                op = checkSingleChar(input);
-            }
-
+            op = checkSingleChar(input);
+           
+           //select & perform operation
             switch(op) {
 
                 case '+':
-                   shell = lhs + rhs;
-                   shell.print();
-                   flag = 0;
+                   shell = lhs + rhs;   //perform the overloaded operation
+                   divider();           //print a formatted divider
+                   shell.print();       //print resulting object with unique name
+                   divider();           //print a formatted divider
+                   flag = 0;            //ensure while terminates
                 break;
 
                 case '-':
-                    shell = lhs - rhs;
-                    shell.print();
-                    flag = 0;
+                    shell = lhs - rhs;  //perform the overloaded operation
+                    divider();          //print formatted divider
+                    shell.print();      //print resulting object with unique name
+                    divider();          //print formatted divider
+                    flag = 0;           //break while
                 break;
 
+                //error message
                 default:
                     std::cout << "Invalid character choice "
                     << "Please enter + or -.\n";
@@ -481,6 +553,38 @@ void arithmeticSeas(SeaPollution* seas, int& numSeas, bool validation) {
     }//end else
 
 }//end arithmeticSeas
+
+//*******************************************************
+// name: printAllSeas
+// called by: menu
+// passed: pointer to an array of objects, int&
+// returns: nothing
+// The printAllSeas function prints all the objects of  *
+// argument seas, using the numSeas argument as a limit *
+//*******************************************************
+void printAllSeas(SeaPollution* seas, int& numSeas) {
+    //print divider for display purposes
+    divider();              
+    //loop through array, printing contents
+    for(size_t i = 0; i < numSeas; ++i) {
+        seas[i].print();
+    }
+    //print divider for display purposes
+    divider();
+}
+
+//*******************************************************
+// name: divider
+// called by: printAllSeas,
+// passed: nothing
+// returns: nothing
+// The divider function prints a border for data display*
+// purposes                                             *
+//*******************************************************
+void divider() {
+    std::cout << "\n<---------------------------------------->\n";
+}
+
 
 
 
