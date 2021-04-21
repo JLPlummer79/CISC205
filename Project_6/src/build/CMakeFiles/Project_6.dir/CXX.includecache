@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/bfant/CISC205/Project_6/src/Yacht.h
+string
+-
+iostream
+-
+
+C:/Users/bfant/CISC205/Project_6/src/main.cpp
+iostream
+-
+Yacht.h
+C:/Users/bfant/CISC205/Project_6/src/Yacht.h
+
