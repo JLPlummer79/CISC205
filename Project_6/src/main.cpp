@@ -2,7 +2,6 @@
 #include "Yacht.h"
 
 int main(int, char**) {
-    std::cout << "Hello, world!\n";
 
     Yacht ac, junk;
 
