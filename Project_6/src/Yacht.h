@@ -36,13 +36,13 @@ class Yacht {
         //move constructor
         Yacht(Yacht &&other) noexcept;
 
-        //move assignment operator (overloaded)
+        //move assignment operator 
         Yacht& operator=(Yacht &&rhs) noexcept;
 
         //copy constructor
         Yacht(const Yacht& other);
 
-        //copy assignment operator (overloaded)
+        //copy assignment operator
         Yacht& operator=(const Yacht &rhs);
 
         //getters
