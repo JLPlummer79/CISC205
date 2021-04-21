@@ -21,19 +21,15 @@ Yacht::Yacht() {
 
 }
 
-//destructor
-//normally dont need to define but need to clean up memory on the heap
-Yacht::~Yacht() {
-
-}
-
 //move constructor
 Yacht::Yacht(Yacht &&other) noexcept {
+    std::cout << "In move constructor\n";
     *this = std::move(other);
 }
 
 //move assignment operator (overloaded)
 Yacht& Yacht::operator=(Yacht &&rhs) noexcept {
+    std::cout << "In move assignment\n";
       name = std::move(rhs.name);
       length = std::move(rhs.length);
       yearBuilt = std::move(rhs.yearBuilt);
@@ -43,6 +39,7 @@ Yacht& Yacht::operator=(Yacht &&rhs) noexcept {
 
 //copy constructor
 Yacht::Yacht(const Yacht& other) {
+    std::cout << "In copy constructor\n";
     name = other.name;
     length = other.length;
     yearBuilt = other.yearBuilt;
@@ -50,6 +47,7 @@ Yacht::Yacht(const Yacht& other) {
 
  //copy assignment operator (overloaded)
 Yacht& Yacht::operator=(const Yacht &rhs) {
+    std::cout << "In copy assignment\n";
     name = rhs.name;
     length = rhs.length;
     yearBuilt = rhs.yearBuilt;
@@ -117,6 +115,13 @@ void Yacht::print() const {
     << std::setprecision(2)
     << *this;
 
+}
+
+void Yacht::garbageCollector(const Yacht* ptr) {
+    //for error checking
+    std::cout << "Collecting garbage...\n";
+    delete ptr;
+    ptr = nullptr;
 }
 
 //*******************************************************

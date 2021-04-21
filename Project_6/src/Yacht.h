@@ -31,7 +31,7 @@ class Yacht {
         Yacht();
 
         //default destructor
-        ~Yacht();
+        ~Yacht() = default;
 
         //move constructor
         Yacht(Yacht &&other) noexcept;
@@ -57,6 +57,9 @@ class Yacht {
 
         //member print function
         void print() const;
+        
+        //member garbageCollection
+        void garbageCollector(const Yacht*);
 
 
 

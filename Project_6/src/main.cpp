@@ -3,18 +3,19 @@
 
 int main(int, char**) {
 
-    Yacht ac, junk;
+    Yacht* ac = new Yacht;
+    Yacht* marina[MAX];
 
-    ac.setName("Enterprise");
-    ac.setLength(1122);
-    ac.setYearBuilt("1958");
+    ac->setName("Enterprise");
+    ac->setLength(1122);
+    ac->setYearBuilt("1958");
 
-    ac.print();
+    ac->print();
 
-    //test name low level
-    //junk.setName("XiJinPingZhoughTTTTTT");
+    marina[0] = ac;
+    marina[0]->garbageCollector(ac);
 
-    //junk.setLength(-240);   
+    
 
-    //junk.setYearBuilt("19241");
+    
 }
