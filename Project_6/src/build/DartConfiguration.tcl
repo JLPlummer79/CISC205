@@ -14,7 +14,7 @@ CostDataFile:
 Site: DESKTOP-DSBTAER
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
-BuildName: Win32-g++
+BuildName: Win32-gmake
 
 # Subprojects
 LabelsForSubprojects: 

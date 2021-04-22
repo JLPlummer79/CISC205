@@ -76,10 +76,10 @@ include CMakeFiles/Project_6.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Project_6.dir/flags.make
 
-CMakeFiles/Project_6.dir/main.cpp.o: CMakeFiles/Project_6.dir/flags.make
-CMakeFiles/Project_6.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project_6.dir/main.cpp.o"
-	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_6.dir/main.cpp.o -c C:/Users/bfant/CISC205/Project_6/src/main.cpp
+CMakeFiles/Project_6.dir/main.cpp.obj: CMakeFiles/Project_6.dir/flags.make
+CMakeFiles/Project_6.dir/main.cpp.obj: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project_6.dir/main.cpp.obj"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project_6.dir/main.cpp.obj -c C:/Users/bfant/CISC205/Project_6/src/main.cpp
 
 CMakeFiles/Project_6.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project_6.dir/main.cpp.i"
@@ -91,12 +91,12 @@ CMakeFiles/Project_6.dir/main.cpp.s: cmake_force
 
 # Object files for target Project_6
 Project_6_OBJECTS = \
-"CMakeFiles/Project_6.dir/main.cpp.o"
+"CMakeFiles/Project_6.dir/main.cpp.obj"
 
 # External object files for target Project_6
 Project_6_EXTERNAL_OBJECTS =
 
-Project_6.exe: CMakeFiles/Project_6.dir/main.cpp.o
+Project_6.exe: CMakeFiles/Project_6.dir/main.cpp.obj
 Project_6.exe: CMakeFiles/Project_6.dir/build.make
 Project_6.exe: libprocess-Project_6.a
 Project_6.exe: CMakeFiles/Project_6.dir/linklibs.rsp

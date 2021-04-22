@@ -552,14 +552,14 @@ Project_6/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_6.dir/build.make CMakeFiles/Project_6.dir/build
 .PHONY : Project_6/fast
 
-Powerboat.o: Powerboat.cpp.o
+Powerboat.obj: Powerboat.cpp.obj
 
-.PHONY : Powerboat.o
+.PHONY : Powerboat.obj
 
 # target to build an object file
-Powerboat.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Powerboat.cpp.o
-.PHONY : Powerboat.cpp.o
+Powerboat.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Powerboat.cpp.obj
+.PHONY : Powerboat.cpp.obj
 
 Powerboat.i: Powerboat.cpp.i
 
@@ -579,14 +579,14 @@ Powerboat.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Powerboat.cpp.s
 .PHONY : Powerboat.cpp.s
 
-Sailboat.o: Sailboat.cpp.o
+Sailboat.obj: Sailboat.cpp.obj
 
-.PHONY : Sailboat.o
+.PHONY : Sailboat.obj
 
 # target to build an object file
-Sailboat.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Sailboat.cpp.o
-.PHONY : Sailboat.cpp.o
+Sailboat.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj
+.PHONY : Sailboat.cpp.obj
 
 Sailboat.i: Sailboat.cpp.i
 
@@ -606,14 +606,14 @@ Sailboat.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Sailboat.cpp.s
 .PHONY : Sailboat.cpp.s
 
-Yacht.o: Yacht.cpp.o
+Yacht.obj: Yacht.cpp.obj
 
-.PHONY : Yacht.o
+.PHONY : Yacht.obj
 
 # target to build an object file
-Yacht.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Yacht.cpp.o
-.PHONY : Yacht.cpp.o
+Yacht.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Yacht.cpp.obj
+.PHONY : Yacht.cpp.obj
 
 Yacht.i: Yacht.cpp.i
 
@@ -633,14 +633,14 @@ Yacht.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Yacht.cpp.s
 .PHONY : Yacht.cpp.s
 
-main.o: main.cpp.o
+main.obj: main.cpp.obj
 
-.PHONY : main.o
+.PHONY : main.obj
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_6.dir/build.make CMakeFiles/Project_6.dir/main.cpp.o
-.PHONY : main.cpp.o
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_6.dir/build.make CMakeFiles/Project_6.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
 main.i: main.cpp.i
 
@@ -701,16 +701,16 @@ help:
 	@echo "... NightlyUpdate"
 	@echo "... Project_6"
 	@echo "... process-Project_6"
-	@echo "... Powerboat.o"
+	@echo "... Powerboat.obj"
 	@echo "... Powerboat.i"
 	@echo "... Powerboat.s"
-	@echo "... Sailboat.o"
+	@echo "... Sailboat.obj"
 	@echo "... Sailboat.i"
 	@echo "... Sailboat.s"
-	@echo "... Yacht.o"
+	@echo "... Yacht.obj"
 	@echo "... Yacht.i"
 	@echo "... Yacht.s"
-	@echo "... main.o"
+	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
 .PHONY : help
