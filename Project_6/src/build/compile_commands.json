@@ -1,0 +1,22 @@
+[
+{
+  "directory": "C:/Users/bfant/CISC205/Project_6/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/process-Project_6.dir/Yacht.cpp.o -c C:/Users/bfant/CISC205/Project_6/src/Yacht.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_6/src/Yacht.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_6/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/process-Project_6.dir/Sailboat.cpp.o -c C:/Users/bfant/CISC205/Project_6/src/Sailboat.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_6/src/Sailboat.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_6/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/process-Project_6.dir/Powerboat.cpp.o -c C:/Users/bfant/CISC205/Project_6/src/Powerboat.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_6/src/Powerboat.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_6/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/Project_6.dir/main.cpp.o -c C:/Users/bfant/CISC205/Project_6/src/main.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_6/src/main.cpp"
+}
+]
