@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/process-Project_6.dir/Powerboat.cpp.obj"
   "CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj"
   "CMakeFiles/process-Project_6.dir/Yacht.cpp.obj"
   "libprocess-Project_6.a"

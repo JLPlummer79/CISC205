@@ -9,6 +9,8 @@ Yacht.h
 Yacht.cpp
 Sailboat.h
 Sailboat.cpp
+Powerboat.h
+Powerboat.cpp
 )
 
 add_executable(Project_6 main.cpp)

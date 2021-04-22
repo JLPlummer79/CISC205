@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/bfant/CISC205/Project_6/src/Sailboat.cpp
-Sailboat.h
-C:/Users/bfant/CISC205/Project_6/src/Sailboat.h
+C:/Users/bfant/CISC205/Project_6/src/Powerboat.cpp
+Powerboat.h
+C:/Users/bfant/CISC205/Project_6/src/Powerboat.h
 Yacht.h
 C:/Users/bfant/CISC205/Project_6/src/Yacht.h
 iostream
@@ -18,7 +18,7 @@ utility
 iomanip
 -
 
-C:/Users/bfant/CISC205/Project_6/src/Sailboat.h
+C:/Users/bfant/CISC205/Project_6/src/Powerboat.h
 Yacht.h
 C:/Users/bfant/CISC205/Project_6/src/Yacht.h
 string

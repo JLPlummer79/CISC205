@@ -1,2 +1,2 @@
-C:/cygwin64/bin/ar.exe qc libprocess-Project_6.a CMakeFiles/process-Project_6.dir/Yacht.cpp.obj CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj
+C:/cygwin64/bin/ar.exe qc libprocess-Project_6.a CMakeFiles/process-Project_6.dir/Yacht.cpp.obj CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj CMakeFiles/process-Project_6.dir/Powerboat.cpp.obj
 C:/cygwin64/bin/ranlib.exe libprocess-Project_6.a

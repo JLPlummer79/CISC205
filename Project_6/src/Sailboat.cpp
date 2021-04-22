@@ -23,9 +23,6 @@ Sailboat::Sailboat(): Yacht() {
 Sailboat::Sailboat(Sailboat &&other) noexcept {
     std::cout << "In move constructor S\n";
 
-    //call to the Yacht move constructor
-    //Yacht(other);
-
     *this = std::move(other);
 }
 
@@ -45,9 +42,6 @@ Sailboat& Sailboat::operator=(Sailboat &&rhs) noexcept {
 Sailboat::Sailboat(const Sailboat& other) {
     std::cout << "In copy constructor S\n";
     sailArea = other.sailArea;
-
-    //call Yacht copy constructor
-    //Yacht(other);
 }
 
 //copy assignment operator (overloaded)
@@ -108,7 +102,8 @@ void Sailboat::setYearBuilt(const std::string yb) {
 
 std::ostream& operator<<(std::ostream& out, const Sailboat& obj) {
     
-    return out << "SailArea: " << obj.getSailArea() << "\n";
+    return out << "Sail Area: " << obj.getSailArea() << 
+    "square feet.\n";
 }
 
 void Sailboat::print() const {
@@ -121,6 +116,5 @@ void Sailboat::print() const {
 
 void Sailboat::garbageCollector(const Sailboat* ptr) {
     std::cout << "Collecting Sailboat garbage...\n";
-    delete ptr;
-    ptr = nullptr;
+    Yacht::garbageCollector(ptr);
 }

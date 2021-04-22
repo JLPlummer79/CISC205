@@ -1,12 +1,14 @@
 #include <iostream>
 #include "Yacht.h"
 #include "Sailboat.h"
+#include "Powerboat.h"
 
 int main(int, char**) {
 
     Yacht* ac = new Yacht;
     Yacht* marina[MAX];
     Sailboat* cr = new Sailboat;
+    Powerboat* pb = new Powerboat;
 
     //testing object creation and adding to the marina
     ac->setName("Enterprise");
@@ -20,11 +22,21 @@ int main(int, char**) {
     cr->setYearBuilt("1975");
     cr->print();
 
+    pb->setNumEngines(2);
+    pb->setTotHorsePower(550.25);
+    pb->setName("Zoom!");
+    pb->setLength(25.75);
+    pb->setYearBuilt("2018");
+    pb->print();
+
     marina[0] = ac;
     marina[1] = cr;
-    marina[0]->garbageCollector(ac);
+    marina[2] = pb;
+    //marina[2]->print();
 
+    marina[0]->garbageCollector(ac);
     marina[1]->garbageCollector(cr);
+    marina[2]->garbageCollector(pb);
 
 
 

@@ -879,12 +879,12 @@ CMakeFiles/ContinuousCoverage.dir/clean:
 CMakeFiles/process-Project_6.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles --progress-num=3,4,5 "Built target process-Project_6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles --progress-num=3,4,5,6 "Built target process-Project_6"
 .PHONY : CMakeFiles/process-Project_6.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/process-Project_6.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/process-Project_6.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles 0
 .PHONY : CMakeFiles/process-Project_6.dir/rule
@@ -911,7 +911,7 @@ CMakeFiles/Project_6.dir/all: CMakeFiles/process-Project_6.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Project_6.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Project_6.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles 0
 .PHONY : CMakeFiles/Project_6.dir/rule
