@@ -7,6 +7,8 @@ enable_testing()
 add_library(process-Project_6
 Yacht.h
 Yacht.cpp
+Sailboat.h
+Sailboat.cpp
 )
 
 add_executable(Project_6 main.cpp)

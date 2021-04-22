@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/bfant/CISC205/Project_6/src/Sailboat.h
+Yacht.h
+C:/Users/bfant/CISC205/Project_6/src/Yacht.h
+string
+-
+
 C:/Users/bfant/CISC205/Project_6/src/Yacht.h
 string
 -
@@ -17,4 +23,6 @@ iostream
 -
 Yacht.h
 C:/Users/bfant/CISC205/Project_6/src/Yacht.h
+Sailboat.h
+C:/Users/bfant/CISC205/Project_6/src/Sailboat.h
 

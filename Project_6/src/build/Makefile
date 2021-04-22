@@ -552,6 +552,33 @@ Project_6/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_6.dir/build.make CMakeFiles/Project_6.dir/build
 .PHONY : Project_6/fast
 
+Sailboat.obj: Sailboat.cpp.obj
+
+.PHONY : Sailboat.obj
+
+# target to build an object file
+Sailboat.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj
+.PHONY : Sailboat.cpp.obj
+
+Sailboat.i: Sailboat.cpp.i
+
+.PHONY : Sailboat.i
+
+# target to preprocess a source file
+Sailboat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Sailboat.cpp.i
+.PHONY : Sailboat.cpp.i
+
+Sailboat.s: Sailboat.cpp.s
+
+.PHONY : Sailboat.s
+
+# target to generate assembly for a file
+Sailboat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Sailboat.cpp.s
+.PHONY : Sailboat.cpp.s
+
 Yacht.obj: Yacht.cpp.obj
 
 .PHONY : Yacht.obj
@@ -647,6 +674,9 @@ help:
 	@echo "... NightlyUpdate"
 	@echo "... Project_6"
 	@echo "... process-Project_6"
+	@echo "... Sailboat.obj"
+	@echo "... Sailboat.i"
+	@echo "... Sailboat.s"
 	@echo "... Yacht.obj"
 	@echo "... Yacht.i"
 	@echo "... Yacht.s"

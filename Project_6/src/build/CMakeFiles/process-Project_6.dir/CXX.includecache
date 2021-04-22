@@ -6,14 +6,22 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/bfant/CISC205/Project_6/src/Yacht.cpp
+C:/Users/bfant/CISC205/Project_6/src/Sailboat.cpp
+Sailboat.h
+C:/Users/bfant/CISC205/Project_6/src/Sailboat.h
 Yacht.h
 C:/Users/bfant/CISC205/Project_6/src/Yacht.h
-utility
--
 iostream
 -
+utility
+-
 iomanip
+-
+
+C:/Users/bfant/CISC205/Project_6/src/Sailboat.h
+Yacht.h
+C:/Users/bfant/CISC205/Project_6/src/Yacht.h
+string
 -
 
 C:/Users/bfant/CISC205/Project_6/src/Yacht.h

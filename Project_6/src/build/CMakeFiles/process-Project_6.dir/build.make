@@ -89,17 +89,32 @@ CMakeFiles/process-Project_6.dir/Yacht.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/process-Project_6.dir/Yacht.cpp.s"
 	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/bfant/CISC205/Project_6/src/Yacht.cpp -o CMakeFiles/process-Project_6.dir/Yacht.cpp.s
 
+CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj: CMakeFiles/process-Project_6.dir/flags.make
+CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj: ../Sailboat.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj -c C:/Users/bfant/CISC205/Project_6/src/Sailboat.cpp
+
+CMakeFiles/process-Project_6.dir/Sailboat.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/process-Project_6.dir/Sailboat.cpp.i"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/bfant/CISC205/Project_6/src/Sailboat.cpp > CMakeFiles/process-Project_6.dir/Sailboat.cpp.i
+
+CMakeFiles/process-Project_6.dir/Sailboat.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/process-Project_6.dir/Sailboat.cpp.s"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/bfant/CISC205/Project_6/src/Sailboat.cpp -o CMakeFiles/process-Project_6.dir/Sailboat.cpp.s
+
 # Object files for target process-Project_6
 process__Project_6_OBJECTS = \
-"CMakeFiles/process-Project_6.dir/Yacht.cpp.obj"
+"CMakeFiles/process-Project_6.dir/Yacht.cpp.obj" \
+"CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj"
 
 # External object files for target process-Project_6
 process__Project_6_EXTERNAL_OBJECTS =
 
 libprocess-Project_6.a: CMakeFiles/process-Project_6.dir/Yacht.cpp.obj
+libprocess-Project_6.a: CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj
 libprocess-Project_6.a: CMakeFiles/process-Project_6.dir/build.make
 libprocess-Project_6.a: CMakeFiles/process-Project_6.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libprocess-Project_6.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libprocess-Project_6.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/process-Project_6.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/process-Project_6.dir/link.txt --verbose=$(VERBOSE)
 
