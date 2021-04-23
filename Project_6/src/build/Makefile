@@ -633,6 +633,33 @@ Yacht.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/Yacht.cpp.s
 .PHONY : Yacht.cpp.s
 
+error.obj: error.cpp.obj
+
+.PHONY : error.obj
+
+# target to build an object file
+error.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/error.cpp.obj
+.PHONY : error.cpp.obj
+
+error.i: error.cpp.i
+
+.PHONY : error.i
+
+# target to preprocess a source file
+error.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/error.cpp.i
+.PHONY : error.cpp.i
+
+error.s: error.cpp.s
+
+.PHONY : error.s
+
+# target to generate assembly for a file
+error.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/error.cpp.s
+.PHONY : error.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -659,6 +686,33 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_6.dir/build.make CMakeFiles/Project_6.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+menu.obj: menu.cpp.obj
+
+.PHONY : menu.obj
+
+# target to build an object file
+menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/menu.cpp.obj
+.PHONY : menu.cpp.obj
+
+menu.i: menu.cpp.i
+
+.PHONY : menu.i
+
+# target to preprocess a source file
+menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/menu.cpp.i
+.PHONY : menu.cpp.i
+
+menu.s: menu.cpp.s
+
+.PHONY : menu.s
+
+# target to generate assembly for a file
+menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_6.dir/build.make CMakeFiles/process-Project_6.dir/menu.cpp.s
+.PHONY : menu.cpp.s
 
 # Help Target
 help:
@@ -710,9 +764,15 @@ help:
 	@echo "... Yacht.obj"
 	@echo "... Yacht.i"
 	@echo "... Yacht.s"
+	@echo "... error.obj"
+	@echo "... error.i"
+	@echo "... error.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... menu.obj"
+	@echo "... menu.i"
+	@echo "... menu.s"
 .PHONY : help
 
 

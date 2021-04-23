@@ -18,9 +18,11 @@ char checkSingleChar(std::string);
 
 int checkIfInteger(const char&);
 
-bool checkValidInteger(const std::string);
+bool checkValidNumber(const std::string);
 
 float checkValidFloat(std::string);
+
+std::string validateString(std::string, int);
 
 
 #endif

@@ -7,6 +7,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/bfant/CISC205/Project_6/src/Powerboat.cpp" "C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles/process-Project_6.dir/Powerboat.cpp.obj"
   "C:/Users/bfant/CISC205/Project_6/src/Sailboat.cpp" "C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj"
   "C:/Users/bfant/CISC205/Project_6/src/Yacht.cpp" "C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles/process-Project_6.dir/Yacht.cpp.obj"
+  "C:/Users/bfant/CISC205/Project_6/src/error.cpp" "C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles/process-Project_6.dir/error.cpp.obj"
+  "C:/Users/bfant/CISC205/Project_6/src/menu.cpp" "C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles/process-Project_6.dir/menu.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

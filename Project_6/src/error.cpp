@@ -24,18 +24,7 @@ int checkSingleInt(std::string input) {
     char s;             //holds single char
     int num;            //holds validated entry
 
-    //loop until valid entry is entered
-    while(input.size() > 1 || input.size() <= 0) {
-        std::cout << "Entry invalid. "
-        << "Please enter a single non-zero number "
-        << "from the menu.\n";
-
-        //get user input
-        std::getline(std::cin, input);
-    }
-    //convert string to char
-    std::istringstream i(input);
-    i >> s;
+    s = checkSingleChar(input);
     
     //validate if s is an int
     num = checkIfInteger(s);
@@ -93,7 +82,7 @@ int checkIfInteger(const char& input) {
         }
 }//end checkIfInteger
 
-bool checkValidInteger(const std::string num) {
+bool checkValidNumber(const std::string num) {
     //validate num
     for (size_t j = 0; j < num.size(); ++j) {
         //entry is decimal, skip the next part
@@ -113,7 +102,7 @@ float checkValidFloat(std::string num) {
     //the reason for less than 10 characters long is to
     //ensure the resulting float is not beyond the max
     //capacity of a float.
-    while(num.empty() || !checkValidInteger(num) || 
+    while(num.empty() || !checkValidNumber(num) || 
     num.length() > 10) {
         std::cout << "The entry is invalid.  "
         << "Please make your entry non-empty and less "
@@ -124,6 +113,44 @@ float checkValidFloat(std::string num) {
     return stof(num);
 
 }
+
+std::string validateString(std::string en, int mag){
+    bool flag = true;
+    while(flag) {
+        //when we want to verify a name
+        if(mag > 4 && !isdigit(en[0])) {
+            while(en.empty() || en.size() > 20) {
+                std::cout << "\nThe entry is invalid. "
+                << "Please enter a name less than 20 "
+                << "characters.\n";
+                std::getline(std::cin, en);
+            }
+            //break big while
+            flag = false;
+            //return valid name
+            return en;
+        }
+        //when we want to verify a year
+        else if(mag <= 4) {
+            while(!checkValidNumber(en) && en.size() != 4){
+                std::cout << "\nThat entry is invalid. "
+                << "Please make your entry 4 digits.\n";
+                std::getline(std::cin, en);
+            }
+            //break big while
+            flag = false;
+            //return valid year
+            return en;
+        }
+        else {
+            std::cout << "Invalid entry.  Please enter a name "
+            << "less than or equal to 20 characters or a "
+            << "year 4 digits in length.\n";
+            std::getline(std::cin, en);
+            mag = en.length();
+        }
+    }//end while
+}//end validate string
 
 //*******************************************************
 // name: 

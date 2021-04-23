@@ -115,11 +115,39 @@ CMakeFiles/process-Project_6.dir/Powerboat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/process-Project_6.dir/Powerboat.cpp.s"
 	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/bfant/CISC205/Project_6/src/Powerboat.cpp -o CMakeFiles/process-Project_6.dir/Powerboat.cpp.s
 
+CMakeFiles/process-Project_6.dir/menu.cpp.obj: CMakeFiles/process-Project_6.dir/flags.make
+CMakeFiles/process-Project_6.dir/menu.cpp.obj: ../menu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/process-Project_6.dir/menu.cpp.obj"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/process-Project_6.dir/menu.cpp.obj -c C:/Users/bfant/CISC205/Project_6/src/menu.cpp
+
+CMakeFiles/process-Project_6.dir/menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/process-Project_6.dir/menu.cpp.i"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/bfant/CISC205/Project_6/src/menu.cpp > CMakeFiles/process-Project_6.dir/menu.cpp.i
+
+CMakeFiles/process-Project_6.dir/menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/process-Project_6.dir/menu.cpp.s"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/bfant/CISC205/Project_6/src/menu.cpp -o CMakeFiles/process-Project_6.dir/menu.cpp.s
+
+CMakeFiles/process-Project_6.dir/error.cpp.obj: CMakeFiles/process-Project_6.dir/flags.make
+CMakeFiles/process-Project_6.dir/error.cpp.obj: ../error.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/process-Project_6.dir/error.cpp.obj"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/process-Project_6.dir/error.cpp.obj -c C:/Users/bfant/CISC205/Project_6/src/error.cpp
+
+CMakeFiles/process-Project_6.dir/error.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/process-Project_6.dir/error.cpp.i"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/bfant/CISC205/Project_6/src/error.cpp > CMakeFiles/process-Project_6.dir/error.cpp.i
+
+CMakeFiles/process-Project_6.dir/error.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/process-Project_6.dir/error.cpp.s"
+	C:/cygwin64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/bfant/CISC205/Project_6/src/error.cpp -o CMakeFiles/process-Project_6.dir/error.cpp.s
+
 # Object files for target process-Project_6
 process__Project_6_OBJECTS = \
 "CMakeFiles/process-Project_6.dir/Yacht.cpp.obj" \
 "CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj" \
-"CMakeFiles/process-Project_6.dir/Powerboat.cpp.obj"
+"CMakeFiles/process-Project_6.dir/Powerboat.cpp.obj" \
+"CMakeFiles/process-Project_6.dir/menu.cpp.obj" \
+"CMakeFiles/process-Project_6.dir/error.cpp.obj"
 
 # External object files for target process-Project_6
 process__Project_6_EXTERNAL_OBJECTS =
@@ -127,9 +155,11 @@ process__Project_6_EXTERNAL_OBJECTS =
 libprocess-Project_6.a: CMakeFiles/process-Project_6.dir/Yacht.cpp.obj
 libprocess-Project_6.a: CMakeFiles/process-Project_6.dir/Sailboat.cpp.obj
 libprocess-Project_6.a: CMakeFiles/process-Project_6.dir/Powerboat.cpp.obj
+libprocess-Project_6.a: CMakeFiles/process-Project_6.dir/menu.cpp.obj
+libprocess-Project_6.a: CMakeFiles/process-Project_6.dir/error.cpp.obj
 libprocess-Project_6.a: CMakeFiles/process-Project_6.dir/build.make
 libprocess-Project_6.a: CMakeFiles/process-Project_6.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libprocess-Project_6.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/bfant/CISC205/Project_6/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libprocess-Project_6.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/process-Project_6.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/process-Project_6.dir/link.txt --verbose=$(VERBOSE)
 

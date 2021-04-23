@@ -11,6 +11,10 @@ Sailboat.h
 Sailboat.cpp
 Powerboat.h
 Powerboat.cpp
+menu.h
+menu.cpp
+error.h
+error.cpp
 )
 
 add_executable(Project_6 main.cpp)
