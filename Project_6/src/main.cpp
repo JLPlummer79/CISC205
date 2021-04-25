@@ -1,3 +1,8 @@
+#define _CRTDBG_MAP_ALLOC
+#include <stdlib.h>
+#include <cstdlib>
+#include <crtdbg.h>
+
 #include <iostream>
 #include "Yacht.h"
 #include "Sailboat.h"
@@ -11,13 +16,7 @@ int main() {
 
     menu(marina);
     
-    
+    _CrtDumpMemoryLeaks();
 
-    
-
-
-
-    
-
-    
+    return 0;
 }
