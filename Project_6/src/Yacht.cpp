@@ -21,6 +21,10 @@ Yacht::Yacht() {
 
 }
 
+Yacht::~Yacht() {
+    std::cout << "Yacht destructor...\n";
+}
+
 //move constructor
 Yacht::Yacht(Yacht &&other) noexcept {
     std::cout << "In move constructor Y\n";
@@ -56,18 +60,46 @@ Yacht& Yacht::operator=(const Yacht &rhs) {
     return *this;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 std::string Yacht::getName() const {
     return name;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 float Yacht::getLength() const {
     return length;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 std::string Yacht::getYearBuilt() const {
     return yearBuilt;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Yacht::setName(const std::string nm) {
     //low level validation
     if(nm.length() > 20 || nm.empty()) {
@@ -80,6 +112,13 @@ void Yacht::setName(const std::string nm) {
     name = nm;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Yacht::setLength(const float len) {
     //low level validation
     if(len <= 0) {
@@ -92,6 +131,13 @@ void Yacht::setLength(const float len) {
     length = len;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Yacht::setYearBuilt(const std::string year) {
     //low level validation
     if(year.length() != 4){
@@ -106,12 +152,18 @@ void Yacht::setYearBuilt(const std::string year) {
 
 //overloaded << operator
 std::ostream& operator<<(std::ostream& out, const Yacht& obj) {
-    return out <<  "\nYacht Name: " << obj.getName() << 
+    return out <<  "\nName of vessel: " << obj.getName() << 
     "\nLength of vessel: " << obj.getLength() << " feet" <<
     "\nYear vessel was built: " << obj.getYearBuilt() << "\n";
 }
 
-
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Yacht::print() const {
     std::cout << std::fixed
     << std::setprecision(2)

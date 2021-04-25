@@ -23,7 +23,7 @@ class Powerboat : public Yacht {
         Powerboat();
 
         //destructor
-        ~Powerboat() = default;
+        ~Powerboat();
 
         //move constructor
         Powerboat(Powerboat &&other) noexcept;

@@ -31,7 +31,7 @@ class Yacht {
         Yacht();
 
         //default destructor
-        ~Yacht() = default;
+        ~Yacht();
 
         //move constructor
         Yacht(Yacht &&other) noexcept;

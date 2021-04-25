@@ -22,7 +22,7 @@ class Sailboat: public Yacht {
         Sailboat(); 
 
         //destructor
-        ~Sailboat() = default;
+        ~Sailboat();
 
         //move constructor
         Sailboat(Sailboat &&other) noexcept;

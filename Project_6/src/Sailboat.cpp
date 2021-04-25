@@ -18,6 +18,9 @@
 Sailboat::Sailboat(): Yacht() {
     sailArea = 0;
 }
+Sailboat::~Sailboat() {
+    std::cout << "Sailboat destructor...\n";
+}
 
 //move constructor
 Sailboat::Sailboat(Sailboat &&other) noexcept {
@@ -55,22 +58,57 @@ Sailboat& Sailboat::operator=(const Sailboat &rhs) {
     return *this;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 float Sailboat::getSailArea() const {
     return sailArea;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 std::string Sailboat::getName() const {
     return Yacht::getName();
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 float Sailboat::getLength() const {
     return Yacht::getLength();
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 std::string Sailboat::getYearBuilt() const {
     return Yacht::getYearBuilt();
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Sailboat::setSailArea(const float sa) {
     //low level validation
     if(sa <= 0) {
@@ -83,18 +121,39 @@ void Sailboat::setSailArea(const float sa) {
     sailArea = sa;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Sailboat::setName(const std::string nm) {
     //set member to argument, low level 
     //error checking handled in base class
     Yacht::setName(nm);
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Sailboat::setLength(const float len) {
     //set member to arg, low level error check
     //handled in base class
     Yacht::setLength(len);
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Sailboat::setYearBuilt(const std::string yb) {
     Yacht::setYearBuilt(yb);
 }
@@ -103,9 +162,16 @@ void Sailboat::setYearBuilt(const std::string yb) {
 std::ostream& operator<<(std::ostream& out, const Sailboat& obj) {
     
     return out << "Sail Area: " << obj.getSailArea() << 
-    "square feet.\n";
+    " square feet.\n";
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Sailboat::print() const {
 
     Yacht::print();

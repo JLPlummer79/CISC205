@@ -11,11 +11,18 @@
 #include "menu.h"
 #include "Yacht.h"
 #include "Powerboat.h"
+#include "Sailboat.h"
 #include "error.h"
 #include <iostream>
 #include <string>
 
-
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void menu(Yacht** marina) {
 
 //holds user input
@@ -52,23 +59,22 @@ while(choice != -1) {
 
         switch(choice) {
             case 1:
-                std::cout << "Calling newYacht\n";
                 newYacht(marina, numVessel,validation);
                 ++numVessel;
             break;
 
             case 2:
-                std::cout << "Calling newPowerBoat\n";
                 newPowerBoat(marina, numVessel, validation);
                 ++numVessel;
             break;
 
             case 3:
                 std::cout << "Calling newSailBoat\n";
+                newSailBoat(marina, numVessel, validation);
+                ++numVessel;
             break;
 
             case 4:
-                std::cout << "Calling display all\n";
                 printAll(marina, numVessel);
             break;
 
@@ -89,7 +95,7 @@ while(choice != -1) {
             case 6:
                 std::cout << "Exiting program.  Be well!\n";
                 choice = -1;
-                //marina->garbageCollector(marina);
+                //free the memory
                 delete[] marina;
             break;
 
@@ -103,6 +109,13 @@ while(choice != -1) {
 
 }//end menu
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void newYacht(Yacht** marina, int& numVessel, bool validation) {
     // holds user input
     std::string input;
@@ -165,6 +178,13 @@ void newYacht(Yacht** marina, int& numVessel, bool validation) {
 
 }//end newYacht
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void printAll(Yacht** marina, int& numVessel) {
     
     for(size_t i = 0; i < numVessel; ++i) {
@@ -172,6 +192,13 @@ void printAll(Yacht** marina, int& numVessel) {
     }
 }//end printAll
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void newPowerBoat(Yacht** marina, int& numVessel, bool validation) {
     // holds user input
     std::string input;
@@ -258,8 +285,93 @@ void newPowerBoat(Yacht** marina, int& numVessel, bool validation) {
         //add the deferenced info to a Yacht object
         Yacht* thing = vessel;
 
+        marina[numVessel] = thing;
+
         //delete vessel;
         
     }//end else
 
 }//end newPowerBoat
+
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
+void newSailBoat(Yacht** marina, int& numVessel, bool validation) {
+    // holds user input
+    std::string input;
+
+    //will hold the length
+    float len;
+
+    //holds sail area
+    int sail;
+
+    //will hold new Sailboat
+    Sailboat* vessel = new Sailboat();
+
+    if(numVessel >= MAX){
+        std::cout << "The marina is full!\n";
+    }
+
+    else {
+        std::cout << "Enter name of Sailboat: ";
+        //get user input
+        std::getline(std::cin, input);
+
+        //execute high-level validation when true
+        if(validation == true) {
+            //validating name
+            input = validateString(input, input.size());
+        }
+        //set Sailboat name
+        vessel->setName(input);
+
+        std::cout << "\nEnter length of Sailboat: ";
+        //get user input
+        std::getline(std::cin, input);
+
+        //execute high-level validation when true
+        if(validation == true) {
+            len = checkValidFloat(input);
+        }
+        else {
+            len = stof(input);
+        }
+        //set Sailboat length
+        vessel->setLength(len);
+
+        std::cout << "\nEnter year constructed: ";
+        //get user input
+        std::getline(std::cin, input);
+
+        //execute high-level validation when true
+        if(validation == true) {
+            input = validateString(input, input.size());
+        }
+        //set Sailboat year
+        vessel->setYearBuilt(input);
+
+        std::cout << "\nEnter sail area: ";
+        //get user input
+        std::getline(std::cin, input);
+
+        if(validation == true) {
+            sail = checkValidFloat(input);
+        }
+        else {
+            sail = stof(input);
+        }
+        //set Sailboat sail area
+        vessel->setSailArea(sail);
+
+        marina[numVessel] = vessel;
+
+
+    }//end else
+
+
+}//end newSailBoat

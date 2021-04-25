@@ -20,6 +20,10 @@ Powerboat::Powerboat(): Yacht() {
     numEngines = 0;
 }
 
+Powerboat::~Powerboat() {
+    std::cout << "Powerboat desructor...\n";
+}
+
 //move constructor
 Powerboat::Powerboat(Powerboat &&other) noexcept {
     std::cout << "In move constructor P\n";
@@ -59,26 +63,68 @@ Powerboat& Powerboat::operator=(const Powerboat &rhs) {
     return *this;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 int Powerboat::getNumEngines() const {
     return numEngines;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 float Powerboat::getTotHorsePower() const {
     return totHorsePower;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 std::string Powerboat::getName() const {
     return Yacht::getName();
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 float Powerboat::getLength() const {
     return Yacht::getLength();
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 std::string Powerboat::getYearBuilt() const {
     return Yacht::getYearBuilt();
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Powerboat::setNumEngines(const int num) {
     //low level validation
     if(num <= 0) {
@@ -91,6 +137,13 @@ void Powerboat::setNumEngines(const int num) {
     numEngines = num;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Powerboat::setTotHorsePower(const float pow) {
     //low level validation
     if(pow <= 0) {
@@ -102,16 +155,37 @@ void Powerboat::setTotHorsePower(const float pow) {
     totHorsePower = pow;
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Powerboat::setName(const std::string nm) {
     //pass arg to base class
     Yacht::setName(nm);
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Powerboat::setLength(const float len) {
     //pass arg to base class
     Yacht::setLength(len);
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Powerboat::setYearBuilt(const std::string yr) {
     //pass arg to base class
     Yacht::setYearBuilt(yr);
@@ -124,7 +198,13 @@ std::ostream& operator<<(std::ostream& out, const Powerboat& obj) {
     " horses.\n";
 }
 
-
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 void Powerboat::print() const {
     
     Yacht::print();

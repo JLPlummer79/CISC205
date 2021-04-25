@@ -82,6 +82,13 @@ int checkIfInteger(const char& input) {
         }
 }//end checkIfInteger
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 int validateInteger(std::string input) {
         
         while(!checkValidNumber(input) || input.empty()) {
@@ -94,6 +101,13 @@ int validateInteger(std::string input) {
 
 }//end checkIfInteger
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 bool checkValidNumber(const std::string num) {
     //validate num
     for (size_t j = 0; j < num.size(); ++j) {
@@ -110,6 +124,13 @@ bool checkValidNumber(const std::string num) {
     return true;
 }//end checkValidInteger
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 float checkValidFloat(std::string num) {
     //the reason for less than 10 characters long is to
     //ensure the resulting float is not beyond the max
@@ -126,11 +147,18 @@ float checkValidFloat(std::string num) {
 
 }
 
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
 std::string validateString(std::string en, int mag){
     bool flag = true;
     while(flag) {
         //when we want to verify a name
-        if(mag > 4 && !isdigit(en[0])) {
+        if(!isdigit(en[0])) {
             while(en.empty() || en.size() > 20) {
                 std::cout << "\nThe entry is invalid. "
                 << "Please enter a name less than 20 "
@@ -139,7 +167,6 @@ std::string validateString(std::string en, int mag){
             }
             //break big while
             flag = false;
-            //return valid name
         }
         //when we want to verify a year
         else if(mag <= 4) {
@@ -150,8 +177,8 @@ std::string validateString(std::string en, int mag){
             }
             //break big while
             flag = false;
-            //return valid year
         }
+        //catch the miscallenous entries
         else {
             std::cout << "Invalid entry.  Please enter a name "
             << "less than or equal to 20 characters or a "
@@ -160,6 +187,8 @@ std::string validateString(std::string en, int mag){
             mag = en.length();
         }
     }//end while
+    
+    //return valid data
     return en;
 }//end validate string
 
