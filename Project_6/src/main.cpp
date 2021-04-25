@@ -1,8 +1,18 @@
+/*
+ *
+ * Jesse Plummer
+ *
+ * Chapter 15, Programming Challenge #6 Yacht 
+ *
+ * May 2nd, 2021
+ * 
+*/
+/*
 #define _CRTDBG_MAP_ALLOC
 #include <stdlib.h>
 #include <cstdlib>
 #include <crtdbg.h>
-
+*/
 #include <iostream>
 #include "Yacht.h"
 #include "Sailboat.h"
@@ -16,7 +26,7 @@ int main() {
 
     menu(marina);
     
-    _CrtDumpMemoryLeaks();
+    //_CrtDumpMemoryLeaks();
 
     return 0;
 }

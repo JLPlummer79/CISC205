@@ -64,66 +64,81 @@ Powerboat& Powerboat::operator=(const Powerboat &rhs) {
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: getNumEngines
+// called by: overloaded << operator
+// passed: nothing
+// returns: int
+// The getNumEngines function returns the value of the  *
+// member variable, numEgines                           *
 //*******************************************************
 int Powerboat::getNumEngines() const {
     return numEngines;
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: getTotHorsePower
+// called by: overloaded << operator
+// passed: nothing
+// returns: float
+// The getTotHorsePower function returns the value of   *
+// the member variable, totHorsePower                   *
 //*******************************************************
 float Powerboat::getTotHorsePower() const {
     return totHorsePower;
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: getName
+// called by: overloaded << operator 
+// passed: nothing
+// returns: std::string
+// The getName function returns the value of the member *
+// variable, name.  Note: name is a member of Yacht     *
+// class, but since Powerboat inherits from Yacht, it   *
+// can access it                                        *
 //*******************************************************
 std::string Powerboat::getName() const {
     return Yacht::getName();
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: getLength
+// called by: overloaded << operator 
+// passed: nothing
+// returns: float
+// The getLength function returns the value of the      *
+// member variable, length.  Note: length is a member of*
+// Yacht class, Powerboat inherits from Yacht, thus     *
+// Powerboat can access it                              *
 //*******************************************************
 float Powerboat::getLength() const {
     return Yacht::getLength();
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: getYearBuilt
+// called by: overloaded << operator
+// passed: nothing
+// returns: std::string
+// The getYearBuilt function returns the value of the   *
+// member variable, yearBuilt.  Note: yearBuilt is a    *
+// member of Yacht class, Powerboat inherits from Yacht,*
+// thus Powerboat can access it                         *
 //*******************************************************
 std::string Powerboat::getYearBuilt() const {
     return Yacht::getYearBuilt();
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: setNumEngines
+// called by: newPowerBoat
+// passed: const int
+// returns: nothing
+// The setNumEngines function checks that the arg is    *
+// greater than zero. If so, the member variable        *
+// numEngines is set to the arg.  If the arg is zero or *
+// less, then an error message is printed and the       *
+// program exited                                       *
 //*******************************************************
 void Powerboat::setNumEngines(const int num) {
     //low level validation
@@ -138,11 +153,15 @@ void Powerboat::setNumEngines(const int num) {
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: setTotHorsePower
+// called by: newPowerBoat
+// passed: const float
+// returns: nothing
+// The setTotHorsePower function checks that the arg is *
+// greater than zero. If so, the member variable        *
+// totHorsePower is set to the arg.  If the arg is zero *
+// or less, then an error message is printed and the    *
+// program exited                                       *
 //*******************************************************
 void Powerboat::setTotHorsePower(const float pow) {
     //low level validation

@@ -17,11 +17,14 @@
 #include <string>
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: menu
+// called by: main
+// passed: pointer to an array of Yacht pointers
+// returns: nothing
+// The menu function prints a menu, controls the flow of*
+// the user's choice, performs error checking, adds the *
+// entry to the passed array, and deletes the array when* 
+//the program is quit                                   *
 //*******************************************************
 void menu(Yacht** marina) {
 
@@ -69,7 +72,6 @@ while(choice != -1) {
             break;
 
             case 3:
-                std::cout << "Calling newSailBoat\n";
                 newSailBoat(marina, numVessel, validation);
                 ++numVessel;
             break;
@@ -110,11 +112,15 @@ while(choice != -1) {
 }//end menu
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: newYacht
+// called by: menu
+// passed: pointer to an array of Yacht pointers, int&, *
+// passed: bool                                         *
+// returns: nothing
+// The newYacht function prompts the user for data, for *
+// a Yacht* object, when bool arg is true, validates the*
+// data, attempts to add when it is false, then adds the*
+// object to the array                                  *
 //*******************************************************
 void newYacht(Yacht** marina, int& numVessel, bool validation) {
     // holds user input
@@ -141,7 +147,6 @@ void newYacht(Yacht** marina, int& numVessel, bool validation) {
             input = validateString(input, input.size());
         }
         //set Yacht name
-        //marina[numVessel]->setName(input);
         sloop->setName(input);
 
         std::cout << "\nEnter length of Yacht: ";
@@ -156,7 +161,6 @@ void newYacht(Yacht** marina, int& numVessel, bool validation) {
             len = stof(input);
         }
         //set Yacht length
-        //marina[numVessel]->setLength(len);
         sloop->setLength(len);
 
         std::cout << "\nEnter year constructed: ";
@@ -168,7 +172,6 @@ void newYacht(Yacht** marina, int& numVessel, bool validation) {
             input = validateString(input, input.size());
         }
         //set Yacht year
-        //marina[numVessel]->setYearBuilt(input);
         sloop->setYearBuilt(input);
 
         marina[numVessel] = sloop;
@@ -179,11 +182,12 @@ void newYacht(Yacht** marina, int& numVessel, bool validation) {
 }//end newYacht
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: printAll
+// called by: menu
+// passed: pointer to an array of Yacht pointers, int&
+// returns: nothing
+// The printAll function prints each Yacht* in the arg  *
+// array based on the int& using the print() function   * 
 //*******************************************************
 void printAll(Yacht** marina, int& numVessel) {
     
@@ -193,11 +197,15 @@ void printAll(Yacht** marina, int& numVessel) {
 }//end printAll
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: newPowerBoat
+// called by: menu
+// passed: pointer to an array of Yacht pointers, int&,
+// passed: bool
+// returns: nothing
+// The newPowerBoat function prompts the user for data, *
+// a Powerboat* object, when bool arg is true, validates*
+// the data, attempts to add when it is false, then adds*
+// the object to the arg array                          *
 //*******************************************************
 void newPowerBoat(Yacht** marina, int& numVessel, bool validation) {
     // holds user input
@@ -294,11 +302,15 @@ void newPowerBoat(Yacht** marina, int& numVessel, bool validation) {
 }//end newPowerBoat
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: newSailBoat
+// called by: menu
+// passed: pointer to an array of Yacht pointers, int&, 
+// passed: bool
+// returns: nothing
+// The newSailBoat function prompts the user for data,  *
+// a Sailboat* object, when bool arg is true, validates *
+// the data, attempts to add when it is false, then adds*
+// the object to the arg array                          *
 //*******************************************************
 void newSailBoat(Yacht** marina, int& numVessel, bool validation) {
     // holds user input

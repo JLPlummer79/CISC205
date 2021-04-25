@@ -1,0 +1,10 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+
+    "C_Cpp.default.includePath": [
+        "C://Program Files (x86)//Windows Kits//10//Include//10.0.18362.0//ucrt//**",
+        "{$workspaceFolder}/libraries/**",
+        "{$workspaceFoler}/**"
+    ],
+    "C_Cpp.intelliSenseEngine": "Tag Parser"
+}

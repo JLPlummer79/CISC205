@@ -59,55 +59,68 @@ Sailboat& Sailboat::operator=(const Sailboat &rhs) {
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: getSailArea
+// called by: overloaded << (Sailboat class)
+// passed: nothing
+// returns: float 
+// The getSailArea function returns the value of the    *
+// member variable sailArea                             *
 //*******************************************************
 float Sailboat::getSailArea() const {
     return sailArea;
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: getName
+// called by: overloaded << operator 
+// passed: nothing
+// returns: std::string
+// The getName function returns the value of the member *
+// variable, name.  Note: name is a member of Yacht     *
+// class, but since Sailboat inherits from Yacht, it can*
+// access it                                            *
 //*******************************************************
 std::string Sailboat::getName() const {
     return Yacht::getName();
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: getLength
+// called by: overloaded << operator 
+// passed: nothing
+// returns: float
+// The getLength function returns the value of the      *
+// member variable, length.  Note: length is a member of*
+// Yacht class, Sailboat inherits from Yacht, thus      *
+// Sailboat can access it                               *
 //*******************************************************
 float Sailboat::getLength() const {
     return Yacht::getLength();
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: getYearBuilt
+// called by: overloaded << operator
+// passed: nothing
+// returns: std::string
+// The getYearBuilt function returns the value of the   *
+// member variable, yearBuilt.  Note: yearBuilt is a    *
+// member of Yacht class, Sailboat inherits from Yacht, *
+// thus Sailboat can access it                          *
 //*******************************************************
 std::string Sailboat::getYearBuilt() const {
     return Yacht::getYearBuilt();
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: setSailArea
+// called by: newSailBoat
+// passed: const float
+// returns: nothing
+// The setSailArea function ensures that sa is greater  *
+// than zero, if so it sets the member variable sailArea*
+// to the arg.  If not greater than zero, the program is*
+// exited.                                              *
 //*******************************************************
 void Sailboat::setSailArea(const float sa) {
     //low level validation
@@ -122,11 +135,14 @@ void Sailboat::setSailArea(const float sa) {
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: setName
+// called by: newSailBoat
+// passed: const std::sring
+// returns: nothing
+// The setName function calls the same function, from   *
+// Yacht class, passing it the same arugment.  This is  *
+// possible since class Sailboat inherits from class    *
+// Yacht                                                *
 //*******************************************************
 void Sailboat::setName(const std::string nm) {
     //set member to argument, low level 
@@ -135,11 +151,14 @@ void Sailboat::setName(const std::string nm) {
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: setLength
+// called by: newSailBoat
+// passed: const float
+// returns: nothing
+// The setLength function calls the same function, from *
+// Yacht class, passing it the same arugment.  This is  *
+// possible since class Sailboat inherits from class    *
+// Yacht                                                *
 //*******************************************************
 void Sailboat::setLength(const float len) {
     //set member to arg, low level error check
@@ -148,17 +167,20 @@ void Sailboat::setLength(const float len) {
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: setYearBuild
+// called by: newSailBoat
+// passed: const std::string
+// returns: nothing
+// The setYearBuilt function calls the same function,   *
+// from Yacht class, passing it the same arugment.  This*
+// is possible since class Sailboat inherits from class *
+// Yacht                                                *
 //*******************************************************
 void Sailboat::setYearBuilt(const std::string yb) {
     Yacht::setYearBuilt(yb);
 }
 
-
+//overloaded << operator
 std::ostream& operator<<(std::ostream& out, const Sailboat& obj) {
     
     return out << "Sail Area: " << obj.getSailArea() << 
@@ -166,11 +188,15 @@ std::ostream& operator<<(std::ostream& out, const Sailboat& obj) {
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: print
+// called by: printAll
+// passed: nothing
+// returns: nothing
+// The prints function prints a Sailboat object based on*
+// the overloaded << operator.  Note: print is declared *
+// virtual in the base class so that when print() is    *
+// called the correct print() (based on the object) is  *
+// called                                               *
 //*******************************************************
 void Sailboat::print() const {
 
