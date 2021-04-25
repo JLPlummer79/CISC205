@@ -15,6 +15,7 @@ CMakeFiles/process-Project_6.dir/Yacht.cpp.obj: ../Yacht.h
 CMakeFiles/process-Project_6.dir/error.cpp.obj: ../error.cpp
 CMakeFiles/process-Project_6.dir/error.cpp.obj: ../error.h
 
+CMakeFiles/process-Project_6.dir/menu.cpp.obj: ../Powerboat.h
 CMakeFiles/process-Project_6.dir/menu.cpp.obj: ../Yacht.h
 CMakeFiles/process-Project_6.dir/menu.cpp.obj: ../error.h
 CMakeFiles/process-Project_6.dir/menu.cpp.obj: ../menu.cpp

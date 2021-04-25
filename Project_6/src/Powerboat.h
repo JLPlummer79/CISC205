@@ -63,4 +63,5 @@ class Powerboat : public Yacht {
 std::ostream& operator<<(std::ostream&, const Powerboat&);
 
 
+
 #endif

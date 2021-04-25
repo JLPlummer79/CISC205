@@ -82,6 +82,18 @@ int checkIfInteger(const char& input) {
         }
 }//end checkIfInteger
 
+int validateInteger(std::string input) {
+        
+        while(!checkValidNumber(input) || input.empty()) {
+            std::cout << "Invalid entry. "
+            << "Please enter a non-empty number.\n";
+            std::getline(std::cin, input);
+        }
+        //return the validated number
+        return stoi(input);
+
+}//end checkIfInteger
+
 bool checkValidNumber(const std::string num) {
     //validate num
     for (size_t j = 0; j < num.size(); ++j) {
@@ -128,7 +140,6 @@ std::string validateString(std::string en, int mag){
             //break big while
             flag = false;
             //return valid name
-            return en;
         }
         //when we want to verify a year
         else if(mag <= 4) {
@@ -140,7 +151,6 @@ std::string validateString(std::string en, int mag){
             //break big while
             flag = false;
             //return valid year
-            return en;
         }
         else {
             std::cout << "Invalid entry.  Please enter a name "
@@ -150,6 +160,7 @@ std::string validateString(std::string en, int mag){
             mag = en.length();
         }
     }//end while
+    return en;
 }//end validate string
 
 //*******************************************************

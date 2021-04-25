@@ -56,7 +56,7 @@ class Yacht {
         void setYearBuilt(const std::string);
 
         //member print function
-        void print() const;
+        virtual void print() const;
         
         //member garbageCollection
         void garbageCollector(const Yacht*);
@@ -67,6 +67,7 @@ class Yacht {
 
 //overloaded << operator
 std::ostream& operator<<(std::ostream&, const Yacht&);
+
 
 
 #endif

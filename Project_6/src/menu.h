@@ -12,9 +12,15 @@
 #define MENU_H
 #include "Yacht.h"
 
-void menu(Yacht*);
+void menu(Yacht**);
 
-void newYacht(Yacht*, int&, bool);
+void newYacht(Yacht**, int&, bool);
+
+void newPowerBoat(Yacht**, int&, bool);
+
+void printAll(Yacht**, int&);
+
+void newSailBoat(Yacht**, int&, bool);
 
 
 #endif

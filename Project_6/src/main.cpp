@@ -4,12 +4,13 @@
 #include "Powerboat.h"
 #include "menu.h"
 
-int main(int, char**) {
+int main() {
 
-    Yacht* marina[MAX];
-    Yacht* ptr = marina[0];
+    Yacht** marina = new Yacht*[MAX];
+    
 
-    menu(ptr);
+    menu(marina);
+    
     
 
     

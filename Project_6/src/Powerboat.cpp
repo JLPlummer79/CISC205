@@ -124,6 +124,7 @@ std::ostream& operator<<(std::ostream& out, const Powerboat& obj) {
     " horses.\n";
 }
 
+
 void Powerboat::print() const {
     
     Yacht::print();

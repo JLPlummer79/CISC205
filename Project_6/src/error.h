@@ -16,6 +16,8 @@ int checkSingleInt(std::string);
 
 char checkSingleChar(std::string);
 
+int validateInteger(std::string);
+
 int checkIfInteger(const char&);
 
 bool checkValidNumber(const std::string);
