@@ -26,17 +26,20 @@ Powerboat::~Powerboat() {
 
 //move constructor
 Powerboat::Powerboat(Powerboat &&other) noexcept {
-    std::cout << "In move constructor P\n";
+    //std::cout << "In move constructor P\n";
 
     *this = std::move(other);
 }
 
 //move assignment operator
 Powerboat& Powerboat::operator=(Powerboat &&rhs) noexcept {
-    std::cout << "In move assignment P\n";
+    //std::cout << "In move assignment P\n";
 
-    totHorsePower = std::move(rhs.totHorsePower);
-    numEngines = std::move(rhs.numEngines);
+    //totHorsePower = std::move(rhs.totHorsePower);
+    this->setTotHorsePower(std::move(rhs.getTotHorsePower()));
+
+    //numEngines = std::move(rhs.numEngines);
+    this->setNumEngines(std::move(rhs.getNumEngines()));
 
     //call to the Yacht move assignment operator
     Yacht::operator=(rhs);
@@ -46,16 +49,20 @@ Powerboat& Powerboat::operator=(Powerboat &&rhs) noexcept {
 
 //copy constructor
 Powerboat::Powerboat(const Powerboat& other) {
-    std::cout << "In copy constructor P\n";
+    //std::cout << "In copy constructor P\n";
     totHorsePower = other.totHorsePower;
     numEngines = other.numEngines;
 }
 
 //copy assignment operator
 Powerboat& Powerboat::operator=(const Powerboat &rhs) {
-    std::cout << "In copy assignment P\n";
-    totHorsePower = rhs.totHorsePower;
-    numEngines = rhs.numEngines;
+    //std::cout << "In copy assignment P\n";
+
+    //totHorsePower = rhs.totHorsePower;
+    this->setTotHorsePower(rhs.getTotHorsePower());
+    
+    //numEngines = rhs.numEngines;
+    this->setNumEngines(rhs.getNumEngines());
 
     //call Yacht copy assignment operator
     Yacht::operator=(rhs);
@@ -175,11 +182,14 @@ void Powerboat::setTotHorsePower(const float pow) {
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: setName
+// called by: newPowerBoat
+// passed: const std::string
+// returns: nothing
+// The setName function calls the same function, from   *
+// Yacht class, passing it the same arugment.  This is  *
+// possible since class Powerboat inherits from class   *
+// Yacht                                                *
 //*******************************************************
 void Powerboat::setName(const std::string nm) {
     //pass arg to base class
@@ -187,11 +197,14 @@ void Powerboat::setName(const std::string nm) {
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: setLength
+// called by: newPowerBoat
+// passed: const float 
+// returns: nothing
+// The setName function calls the same function, from   *
+// Yacht class, passing it the same arugment.  This is  *
+// possible since class Powerboat inherits from class    *
+// Yacht                                                *
 //*******************************************************
 void Powerboat::setLength(const float len) {
     //pass arg to base class
@@ -199,17 +212,21 @@ void Powerboat::setLength(const float len) {
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: setYearBuilt
+// called by: const std::string
+// passed: cosnt std::string
+// returns: nothing
+// The setName function calls the same function, from   *
+// Yacht class, passing it the same arugment.  This is  *
+// possible since class Powerboat inherits from class    *
+// Yacht                                                *
 //*******************************************************
 void Powerboat::setYearBuilt(const std::string yr) {
     //pass arg to base class
     Yacht::setYearBuilt(yr);
 }
 
+//overloaded insertion stream operator
 std::ostream& operator<<(std::ostream& out, const Powerboat& obj) {
     
     return out << "Number of Engines: " << obj.getNumEngines() <<
@@ -218,11 +235,15 @@ std::ostream& operator<<(std::ostream& out, const Powerboat& obj) {
 }
 
 //*******************************************************
-// name: 
-// called by:
-// passed: 
-// returns: 
-// The 'name' function 'what function does'             *
+// name: print
+// called by: printAll
+// passed: nothing
+// returns: nothing
+//The prints function prints a Powerboat object based on*
+// the overloaded << operator.  Note: print is declared *
+// virtual in the base class so that when print() is    *
+// called the correct print() (based on the object) is  *
+// called                                               *
 //*******************************************************
 void Powerboat::print() const {
     
@@ -231,10 +252,3 @@ void Powerboat::print() const {
     << std::setprecision(2)
     << *this;
 }
-
-void Powerboat::garbageCollector(const Powerboat* ptr) {
-    std::cout << "Collecting Powerboat garbage...\n";
-    Yacht::garbageCollector(ptr);
-}
-
-

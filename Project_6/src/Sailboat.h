@@ -48,9 +48,6 @@ class Sailboat: public Yacht {
         void setLength(const float);
         void setYearBuilt(const std::string);
 
-        //member garbageCollector
-        void garbageCollector(const Sailboat*);
-
         //member print
         void print() const;
 

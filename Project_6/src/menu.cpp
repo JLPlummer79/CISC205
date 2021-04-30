@@ -174,9 +174,9 @@ void newYacht(Yacht** marina, int& numVessel, bool validation) {
         //set Yacht year
         sloop->setYearBuilt(input);
 
+        //assign new object to the array
         marina[numVessel] = sloop;
 
-        //delete sloop;
     }//end else
 
 }//end newYacht
@@ -293,9 +293,8 @@ void newPowerBoat(Yacht** marina, int& numVessel, bool validation) {
         //add the deferenced info to a Yacht object
         Yacht* thing = vessel;
 
+        //add new object to the array
         marina[numVessel] = thing;
-
-        //delete vessel;
         
     }//end else
 
@@ -380,8 +379,8 @@ void newSailBoat(Yacht** marina, int& numVessel, bool validation) {
         //set Sailboat sail area
         vessel->setSailArea(sail);
 
+        //set new object to the array
         marina[numVessel] = vessel;
-
 
     }//end else
 

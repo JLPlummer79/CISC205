@@ -24,16 +24,17 @@ Sailboat::~Sailboat() {
 
 //move constructor
 Sailboat::Sailboat(Sailboat &&other) noexcept {
-    std::cout << "In move constructor S\n";
+    //std::cout << "In move constructor S\n";
 
     *this = std::move(other);
 }
 
 //move assignment operator (overloaded)
 Sailboat& Sailboat::operator=(Sailboat &&rhs) noexcept {
-    std::cout << "In move assignment S\n";
+    //std::cout << "In move assignment S\n";
 
-    sailArea = std::move(rhs.sailArea);
+    //sailArea = std::move(rhs.sailArea);
+    this->setSailArea(std::move(rhs.getSailArea()));
 
     //call to the Yacht move assignent operator
     Yacht::operator=(rhs);
@@ -43,14 +44,16 @@ Sailboat& Sailboat::operator=(Sailboat &&rhs) noexcept {
 
 //copy constructor
 Sailboat::Sailboat(const Sailboat& other) {
-    std::cout << "In copy constructor S\n";
+    //std::cout << "In copy constructor S\n";
     sailArea = other.sailArea;
 }
 
 //copy assignment operator (overloaded)
 Sailboat& Sailboat::operator=(const Sailboat &rhs) {
-    std::cout << "In copy assignment S\n";
-    sailArea = rhs.sailArea;
+    //std::cout << "In copy assignment S\n";
+    //sailArea = rhs.sailArea;
+
+    this->setSailArea(rhs.getSailArea());
 
     //call Yacht copy assignment operator
     Yacht::operator=(rhs);
@@ -204,9 +207,4 @@ void Sailboat::print() const {
     std::cout << std::fixed
     << std::setprecision(2)
     << *this;
-}
-
-void Sailboat::garbageCollector(const Sailboat* ptr) {
-    std::cout << "Collecting Sailboat garbage...\n";
-    Yacht::garbageCollector(ptr);
 }

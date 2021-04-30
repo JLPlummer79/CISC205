@@ -58,11 +58,6 @@ class Yacht {
         //member print function
         virtual void print() const;
         
-        //member garbageCollection
-        void garbageCollector(const Yacht*);
-
-
-
 };
 
 //overloaded << operator
