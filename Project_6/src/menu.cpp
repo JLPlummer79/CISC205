@@ -379,7 +379,7 @@ void newSailBoat(Yacht** marina, int& numVessel, bool validation) {
         //set Sailboat sail area
         vessel->setSailArea(sail);
 
-        //set new object to the array
+        //set new object
         marina[numVessel] = vessel;
 
     }//end else
