@@ -201,6 +201,11 @@ void Yacht::print() const {
 
 }
 
+void Yacht::garbageCollector(Yacht* ptr) {
+    delete ptr;
+    ptr = nullptr;
+}
+
 //*******************************************************
 // name: 
 // called by:

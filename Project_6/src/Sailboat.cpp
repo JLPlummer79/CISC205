@@ -14,6 +14,7 @@
 #include <utility>
 #include <iomanip>
 
+
 //default constructor
 Sailboat::Sailboat(): Yacht() {
     sailArea = 0;
@@ -207,4 +208,9 @@ void Sailboat::print() const {
     std::cout << std::fixed
     << std::setprecision(2)
     << *this;
+}
+
+void Sailboat::garbageCollector(Sailboat* ptr) {
+    delete ptr;
+    ptr = nullptr;
 }

@@ -252,3 +252,8 @@ void Powerboat::print() const {
     << std::setprecision(2)
     << *this;
 }
+
+void Powerboat::garbageCollector(Powerboat* ptr) {
+    delete ptr;
+    ptr = nullptr;
+}

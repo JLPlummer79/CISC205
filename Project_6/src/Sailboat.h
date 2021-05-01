@@ -51,6 +51,9 @@ class Sailboat: public Yacht {
         //member print
         void print() const;
 
+        //garbageCollector
+        void garbageCollector(Sailboat*);
+
 };
 
 //overloaded << operator

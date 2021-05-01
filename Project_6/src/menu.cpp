@@ -177,6 +177,8 @@ void newYacht(Yacht** marina, int& numVessel, bool validation) {
         //assign new object to the array
         marina[numVessel] = sloop;
 
+        //marina[numVessel]->garbageCollector(sloop);
+
     }//end else
 
 }//end newYacht
@@ -295,6 +297,8 @@ void newPowerBoat(Yacht** marina, int& numVessel, bool validation) {
 
         //add new object to the array
         marina[numVessel] = thing;
+
+        //marina[numVessel]->garbageCollector(thing);
         
     }//end else
 
@@ -381,6 +385,8 @@ void newSailBoat(Yacht** marina, int& numVessel, bool validation) {
 
         //set new object
         marina[numVessel] = vessel;
+
+        //marina[numVessel]->garbageCollector(vessel);
 
     }//end else
 

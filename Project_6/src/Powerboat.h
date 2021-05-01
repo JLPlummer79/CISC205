@@ -54,6 +54,8 @@ class Powerboat : public Yacht {
         //member print
         void print() const;
 
+        void garbageCollector(Powerboat*);
+
 };
 
 //overloaded stream insertion operator
