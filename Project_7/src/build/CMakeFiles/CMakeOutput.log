@@ -1,0 +1,57 @@
+The system is: Windows - 10.0.19041 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: C:/cygwin64/bin/gcc.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+
+The C compiler identification is GNU, found in "C:/Users/bfant/CISC205/Project_7/src/build/CMakeFiles/3.19.20122902-MSVC_2/CompilerIdC/a.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: C:/cygwin64/bin/g++.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+
+The CXX compiler identification is GNU, found in "C:/Users/bfant/CISC205/Project_7/src/build/CMakeFiles/3.19.20122902-MSVC_2/CompilerIdCXX/a.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/Users/bfant/CISC205/Project_7/src/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Strawberry/c/bin/gmake.exe cmTC_5c00e/fast && C:/Strawberry/c/bin/gmake.exe  -f CMakeFiles/cmTC_5c00e.dir/build.make CMakeFiles/cmTC_5c00e.dir/build
+gmake.exe[1]: Entering directory 'C:/Users/bfant/CISC205/Project_7/src/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5c00e.dir/testCCompiler.c.obj
+C:/cygwin64/bin/gcc.exe    -o CMakeFiles/cmTC_5c00e.dir/testCCompiler.c.obj -c C:/Users/bfant/CISC205/Project_7/src/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_5c00e.exe
+"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_5c00e.dir/objects.a
+C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_5c00e.dir/objects.a @CMakeFiles/cmTC_5c00e.dir/objects1.rsp
+C:/cygwin64/bin/gcc.exe -Wl,--whole-archive CMakeFiles/cmTC_5c00e.dir/objects.a -Wl,--no-whole-archive -o cmTC_5c00e.exe -Wl,--out-implib,libcmTC_5c00e.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+gmake.exe[1]: Leaving directory 'C:/Users/bfant/CISC205/Project_7/src/build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/Users/bfant/CISC205/Project_7/src/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Strawberry/c/bin/gmake.exe cmTC_2a706/fast && C:/Strawberry/c/bin/gmake.exe  -f CMakeFiles/cmTC_2a706.dir/build.make CMakeFiles/cmTC_2a706.dir/build
+gmake.exe[1]: Entering directory 'C:/Users/bfant/CISC205/Project_7/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2a706.dir/testCXXCompiler.cxx.o
+C:/cygwin64/bin/g++.exe    -o CMakeFiles/cmTC_2a706.dir/testCXXCompiler.cxx.o -c C:/Users/bfant/CISC205/Project_7/src/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_2a706.exe
+"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe" -E rm -f CMakeFiles/cmTC_2a706.dir/objects.a
+C:/cygwin64/bin/ar.exe cr CMakeFiles/cmTC_2a706.dir/objects.a @CMakeFiles/cmTC_2a706.dir/objects1.rsp
+C:/cygwin64/bin/g++.exe -Wl,--whole-archive CMakeFiles/cmTC_2a706.dir/objects.a -Wl,--no-whole-archive -o cmTC_2a706.exe -Wl,--out-implib,libcmTC_2a706.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+gmake.exe[1]: Leaving directory 'C:/Users/bfant/CISC205/Project_7/src/build/CMakeFiles/CMakeTmp'
+
+
+

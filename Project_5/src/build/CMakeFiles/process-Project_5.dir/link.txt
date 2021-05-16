@@ -1,0 +1,2 @@
+C:/cygwin64/bin/ar.exe qc libprocess-Project_5.a CMakeFiles/process-Project_5.dir/SeaPollution.cpp.obj CMakeFiles/process-Project_5.dir/menu.cpp.obj CMakeFiles/process-Project_5.dir/error.cpp.obj
+C:/cygwin64/bin/ranlib.exe libprocess-Project_5.a
