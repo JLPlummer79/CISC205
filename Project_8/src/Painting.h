@@ -19,7 +19,38 @@ class Painting {
 
     public:
 
-        //Exeption classes need to go here...
+        //Exception class EmptyValue, for empty throws
+        class EmptyValue {};
+
+        //Exception class NegativeValue, for negative float throws
+        class NegativeValue{
+            private:
+                float value;
+            public:
+                //constructor
+                NegativeValue(float num) {
+                    num = value;
+                }
+                //getter
+                float getValue() const {
+                    return value;
+                }
+        }; //end negativeValue Exception class
+
+        //Exception class BigString, for strings over 15 char throws
+        class BigString{
+            private:
+                std::string sName;
+            public:
+                //constructor
+                BigString(std::string n) {
+                    sName = n;
+                }
+            //getter
+            std::string getsName() const {
+                return sName;
+            }
+        }; //end BigString Exception class
 
         //default constructor
         Painting();
