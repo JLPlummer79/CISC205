@@ -28,18 +28,23 @@ void menu(<Painting> boats) {
         switch(flag) {
             case 1:
                 std::cout << "Input cust info.\n";
+                //call addCustomer(<vector>)
             break;
 
             case 2:
                 std::cout << "Edit a customer's info.\n";
+                //call editCustomer(<vector>)
             break;
 
             case 3:
                 std::cout << "Find largest contract.\n";
+                //call findLargest(<vector>)
             break;
 
             case 4:
                 std::cout << "Print all contracts. With total at end.\n";
+                //print all contracts using print() function 
+                // & overloaded stream operator
             break;
 
             case 5:
