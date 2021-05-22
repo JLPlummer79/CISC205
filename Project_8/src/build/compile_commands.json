@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/bfant/CISC205/Project_8/src/build",
+  "command": "C:/cygwin64/bin/x86_64-pc-cygwin-g++.exe   -g -o CMakeFiles/process-Project_8.dir/Painting.cpp.o -c C:/Users/bfant/CISC205/Project_8/src/Painting.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_8/src/Painting.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_8/src/build",
+  "command": "C:/cygwin64/bin/x86_64-pc-cygwin-g++.exe   -g -o CMakeFiles/Project_8.dir/main.cpp.o -c C:/Users/bfant/CISC205/Project_8/src/main.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_8/src/main.cpp"
+}
+]
