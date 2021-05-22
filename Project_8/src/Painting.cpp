@@ -7,6 +7,9 @@
 
 #include "Painting.h"
 #include <string>
+#include <iostream>
+#include <utility>
+#include <iomanip>
 
 //default constructor
 Painting::Painting() {
@@ -14,6 +17,60 @@ Painting::Painting() {
     boatName = " ";
     contract = 0.0;
     paidToDate = 0.0;
+}
+
+//move constructor
+Painting::Painting(Painting &&other) noexcept{
+    *this = std::move(other);
+}
+
+//move assignment operator
+Painting& Painting::operator=(Painting &&other) noexcept{
+    name = std::move(other.name);
+    boatName = std::move(other.boatName);
+    contract = std::move(other.contract);
+    paidToDate = std::move(other.paidToDate);
+
+    return *this;
+}
+
+//copy consructor
+Painting::Painting(const Painting& other) {
+    name = other.name;
+    boatName = other.boatName;
+    contract = other.contract;
+    paidToDate = other.paidToDate;
+}
+
+//copy assingment
+Painting& Painting::operator=(const Painting &other) {
+    name = other.name;
+    //this->setName(other.getName());
+    boatName = other.boatName;
+    //this->setboatName(other.getBoatName());
+    contract = other.contract;
+    //this->setContract(other.getContract());
+    paidToDate = other.paidToDate;
+    //this->setPaidToDate(other.getPaidToDate());
+
+    return *this;
+}
+
+//overloaded addition operator
+float Painting::operator+(const Painting &rhs) {
+    float temp;
+
+    temp = this->getContract() + rhs.getContract();
+
+    return temp;
+}
+
+//overloaded greater than operator
+bool Painting::operator>(const Painting &rhs) {
+    if(this->getContract() > rhs.getContract()) {
+        return true;
+    }
+    return false;
 }
 
 //*******************************************************
@@ -124,6 +181,13 @@ void Painting::setPaidToDate(float ptd) {
     }
     //set member var to arg
     paidToDate = ptd;
+}
+
+//overloaded insertion stream operator
+std::ostream& operator<<(std::ostream& out, const Painting& obj) {
+    return out << "\nName: " << obj.getName() << "\nBoatName: "
+    << obj.getBoatName() << "\nContract Value: " << obj.getContract()
+    << "\nAmount Paid: " << obj.getPaidToDate() << "\n";
 }
 
 //*******************************************************
