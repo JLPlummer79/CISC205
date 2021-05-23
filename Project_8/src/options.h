@@ -13,11 +13,16 @@
 
 void addCustomer(std::vector<Painting>&);
 
-void editCustomer(std::vector<Painting>);
+void editCustomer(std::vector<Painting>&);
 
 void findLargest(std::vector<Painting>);
 
 void printAll(std::vector<Painting>);
+
+int editCustomerMenu();
+
+int matchCustomer(std::vector<Painting>&, const std::string);
+
 
 
 #endif

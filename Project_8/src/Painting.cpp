@@ -248,6 +248,7 @@ int Painting::convertSingleInt(std::string num) {
         std::cout << m << '\n';
         throw ImpossibleStr(m);
     }
+    return choice;
 }//end convertSingleInt
 
 void Painting::print() const {

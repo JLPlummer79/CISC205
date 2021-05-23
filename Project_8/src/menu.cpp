@@ -25,7 +25,7 @@ void menu(std::vector<Painting> boats) {
     int flag = 0;
     Painting shell;
     //this may be better in Painting.h to share amongst all the programs
-    const std::string eMess = " Please select a choice from the menu\n";
+    //const std::string eMess = " Please select a choice from the menu.\n";
 
     while(flag != -1) {
         std::cout << "\n\n              Main Menu\n";
@@ -67,7 +67,7 @@ void menu(std::vector<Painting> boats) {
 
             case 2:
                 std::cout << "Edit a customer's info.\n";
-                //call editCustomer(<vector>)
+                editCustomer(boats);
             break;
 
             case 3:

@@ -10,6 +10,8 @@
 #include <string>
 #include <iostream>
 
+const std::string eMess = " Please select a choice from the menu.\n";
+
 class Painting {
     private:
         std::string name;
