@@ -7,10 +7,11 @@
 
 #ifndef MENU_H
 #define MENU_H
+
 #include "Painting.h"
 #include <vector>
 
-void menu(<Painting>);
+void menu(std::vector<Painting>);
 
 
 

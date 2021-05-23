@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/process-Project_8.dir/Painting.cpp.o"
+  "CMakeFiles/process-Project_8.dir/Painting.cpp.obj"
+  "CMakeFiles/process-Project_8.dir/menu.cpp.obj"
+  "CMakeFiles/process-Project_8.dir/options.cpp.obj"
   "libprocess-Project_8.a"
   "libprocess-Project_8.pdb"
 )

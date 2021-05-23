@@ -1,2 +1,2 @@
-C:/cygwin64/bin/ar.exe qc libprocess-Project_8.a CMakeFiles/process-Project_8.dir/Painting.cpp.o
+C:/cygwin64/bin/ar.exe qc libprocess-Project_8.a CMakeFiles/process-Project_8.dir/Painting.cpp.obj CMakeFiles/process-Project_8.dir/menu.cpp.obj CMakeFiles/process-Project_8.dir/options.cpp.obj
 C:/cygwin64/bin/ranlib.exe libprocess-Project_8.a

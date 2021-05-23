@@ -21,11 +21,13 @@ Painting::Painting() {
 
 //move constructor
 Painting::Painting(Painting &&other) noexcept{
+    std::cout << "move constructor\n";
     *this = std::move(other);
 }
 
 //move assignment operator
 Painting& Painting::operator=(Painting &&other) noexcept{
+    std::cout << "move assignment\n";
     name = std::move(other.name);
     boatName = std::move(other.boatName);
     contract = std::move(other.contract);
@@ -36,6 +38,7 @@ Painting& Painting::operator=(Painting &&other) noexcept{
 
 //copy consructor
 Painting::Painting(const Painting& other) {
+    std::cout << "copy constructor\n";
     name = other.name;
     boatName = other.boatName;
     contract = other.contract;
@@ -44,6 +47,7 @@ Painting::Painting(const Painting& other) {
 
 //copy assingment
 Painting& Painting::operator=(const Painting &other) {
+    std::cout << "copy assignment\n";
     name = other.name;
     //this->setName(other.getName());
     boatName = other.boatName;
@@ -188,6 +192,69 @@ std::ostream& operator<<(std::ostream& out, const Painting& obj) {
     return out << "\nName: " << obj.getName() << "\nBoatName: "
     << obj.getBoatName() << "\nContract Value: " << obj.getContract()
     << "\nAmount Paid: " << obj.getPaidToDate() << "\n";
+}
+
+//*******************************************************
+// name: 
+// called by:
+// passed: 
+// returns: 
+// The 'name' function 'what function does'             *
+//*******************************************************
+float Painting::convertFloat(std::string num) {
+    float fNum;
+
+    if(num.empty()) {
+        throw EmptyValue();
+    }
+    try {
+        fNum = stof(num);
+    }
+    catch (std::invalid_argument e) {
+        std::string m = "Invalid argument.";
+        std::cout << m << '\n';
+        throw ImpossibleStr(m);
+    }
+    catch(std::out_of_range e) {
+        std::string m = "Input out of range.";
+        std::cout << m << '\n';
+        throw ImpossibleStr(m);
+    }
+
+    return fNum;
+}//end convertFloat
+
+int Painting::convertSingleInt(std::string num) {
+    int choice;
+
+    if(num.empty()) {
+        throw EmptyValue();
+    }
+
+    else if(num.size() > 1) {
+        throw BigString(num);
+    }
+
+    try{
+        choice = stoi(num);
+    }
+    catch(std::invalid_argument e) {
+        std::string m = "Invalid argument.";
+        std::cout << m << '\n';
+        throw ImpossibleStr(m);
+    }
+    catch(std::out_of_range e) {
+        std::string m = "Input out of range.";
+        std::cout << m << '\n';
+        throw ImpossibleStr(m);
+    }
+}//end convertSingleInt
+
+void Painting::print() const {
+
+    std::cout << std::fixed 
+    << std::setprecision(2)
+    << *this;    
 }
 
 //*******************************************************

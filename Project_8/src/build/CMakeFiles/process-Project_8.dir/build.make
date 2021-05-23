@@ -76,10 +76,10 @@ include CMakeFiles/process-Project_8.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/process-Project_8.dir/flags.make
 
-CMakeFiles/process-Project_8.dir/Painting.cpp.o: CMakeFiles/process-Project_8.dir/flags.make
-CMakeFiles/process-Project_8.dir/Painting.cpp.o: ../Painting.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/bfant/CISC205/Project_8/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/process-Project_8.dir/Painting.cpp.o"
-	C:/cygwin64/bin/x86_64-pc-cygwin-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/process-Project_8.dir/Painting.cpp.o -c C:/Users/bfant/CISC205/Project_8/src/Painting.cpp
+CMakeFiles/process-Project_8.dir/Painting.cpp.obj: CMakeFiles/process-Project_8.dir/flags.make
+CMakeFiles/process-Project_8.dir/Painting.cpp.obj: ../Painting.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/bfant/CISC205/Project_8/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/process-Project_8.dir/Painting.cpp.obj"
+	C:/cygwin64/bin/x86_64-pc-cygwin-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/process-Project_8.dir/Painting.cpp.obj -c C:/Users/bfant/CISC205/Project_8/src/Painting.cpp
 
 CMakeFiles/process-Project_8.dir/Painting.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/process-Project_8.dir/Painting.cpp.i"
@@ -89,17 +89,47 @@ CMakeFiles/process-Project_8.dir/Painting.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/process-Project_8.dir/Painting.cpp.s"
 	C:/cygwin64/bin/x86_64-pc-cygwin-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/bfant/CISC205/Project_8/src/Painting.cpp -o CMakeFiles/process-Project_8.dir/Painting.cpp.s
 
+CMakeFiles/process-Project_8.dir/menu.cpp.obj: CMakeFiles/process-Project_8.dir/flags.make
+CMakeFiles/process-Project_8.dir/menu.cpp.obj: ../menu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/bfant/CISC205/Project_8/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/process-Project_8.dir/menu.cpp.obj"
+	C:/cygwin64/bin/x86_64-pc-cygwin-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/process-Project_8.dir/menu.cpp.obj -c C:/Users/bfant/CISC205/Project_8/src/menu.cpp
+
+CMakeFiles/process-Project_8.dir/menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/process-Project_8.dir/menu.cpp.i"
+	C:/cygwin64/bin/x86_64-pc-cygwin-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/bfant/CISC205/Project_8/src/menu.cpp > CMakeFiles/process-Project_8.dir/menu.cpp.i
+
+CMakeFiles/process-Project_8.dir/menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/process-Project_8.dir/menu.cpp.s"
+	C:/cygwin64/bin/x86_64-pc-cygwin-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/bfant/CISC205/Project_8/src/menu.cpp -o CMakeFiles/process-Project_8.dir/menu.cpp.s
+
+CMakeFiles/process-Project_8.dir/options.cpp.obj: CMakeFiles/process-Project_8.dir/flags.make
+CMakeFiles/process-Project_8.dir/options.cpp.obj: ../options.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/bfant/CISC205/Project_8/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/process-Project_8.dir/options.cpp.obj"
+	C:/cygwin64/bin/x86_64-pc-cygwin-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/process-Project_8.dir/options.cpp.obj -c C:/Users/bfant/CISC205/Project_8/src/options.cpp
+
+CMakeFiles/process-Project_8.dir/options.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/process-Project_8.dir/options.cpp.i"
+	C:/cygwin64/bin/x86_64-pc-cygwin-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/bfant/CISC205/Project_8/src/options.cpp > CMakeFiles/process-Project_8.dir/options.cpp.i
+
+CMakeFiles/process-Project_8.dir/options.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/process-Project_8.dir/options.cpp.s"
+	C:/cygwin64/bin/x86_64-pc-cygwin-g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/bfant/CISC205/Project_8/src/options.cpp -o CMakeFiles/process-Project_8.dir/options.cpp.s
+
 # Object files for target process-Project_8
 process__Project_8_OBJECTS = \
-"CMakeFiles/process-Project_8.dir/Painting.cpp.o"
+"CMakeFiles/process-Project_8.dir/Painting.cpp.obj" \
+"CMakeFiles/process-Project_8.dir/menu.cpp.obj" \
+"CMakeFiles/process-Project_8.dir/options.cpp.obj"
 
 # External object files for target process-Project_8
 process__Project_8_EXTERNAL_OBJECTS =
 
-libprocess-Project_8.a: CMakeFiles/process-Project_8.dir/Painting.cpp.o
+libprocess-Project_8.a: CMakeFiles/process-Project_8.dir/Painting.cpp.obj
+libprocess-Project_8.a: CMakeFiles/process-Project_8.dir/menu.cpp.obj
+libprocess-Project_8.a: CMakeFiles/process-Project_8.dir/options.cpp.obj
 libprocess-Project_8.a: CMakeFiles/process-Project_8.dir/build.make
 libprocess-Project_8.a: CMakeFiles/process-Project_8.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/bfant/CISC205/Project_8/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libprocess-Project_8.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/bfant/CISC205/Project_8/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libprocess-Project_8.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/process-Project_8.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/process-Project_8.dir/link.txt --verbose=$(VERBOSE)
 

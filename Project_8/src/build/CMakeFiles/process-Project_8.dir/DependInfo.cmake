@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/bfant/CISC205/Project_8/src/Painting.cpp" "C:/Users/bfant/CISC205/Project_8/src/build/CMakeFiles/process-Project_8.dir/Painting.cpp.o"
+  "C:/Users/bfant/CISC205/Project_8/src/Painting.cpp" "C:/Users/bfant/CISC205/Project_8/src/build/CMakeFiles/process-Project_8.dir/Painting.cpp.obj"
+  "C:/Users/bfant/CISC205/Project_8/src/menu.cpp" "C:/Users/bfant/CISC205/Project_8/src/build/CMakeFiles/process-Project_8.dir/menu.cpp.obj"
+  "C:/Users/bfant/CISC205/Project_8/src/options.cpp" "C:/Users/bfant/CISC205/Project_8/src/build/CMakeFiles/process-Project_8.dir/options.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

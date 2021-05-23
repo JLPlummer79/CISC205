@@ -6,13 +6,26 @@
     Programming Challenge 8 Re-visiting Ivo's Yacht Painting Service
 */
 #include "menu.h"
+#include "options.h"
+#include "Painting.h"
 #include <vector>
 #include <string>
 
-void menu(<Painting> boats) {
+//*******************************************************
+// name: menu
+// called by: main
+// passed: std::vector<Painting>
+// returns: nothing
+// The 'name' function 'what function does'             *
+//*******************************************************
+
+void menu(std::vector<Painting> boats) {
 
     std::string input;
     int flag = 0;
+    Painting shell;
+    //this may be better in Painting.h to share amongst all the programs
+    const std::string eMess = " Please select a choice from the menu\n";
 
     while(flag != -1) {
         std::cout << "\n\n              Main Menu\n";
@@ -25,10 +38,31 @@ void menu(<Painting> boats) {
         std::cout << "----------------------------------------\n\n";
         std::getline(std::cin,input);
 
+        //shell needs to call convertSingleInt
+        try{
+            flag = shell.convertSingleInt(input);
+        }
+        catch(Painting::EmptyValue) {
+            std::cout << "Error!\n"
+            << eMess;
+            continue;
+        }
+        catch(Painting::BigString e) {
+            std::cout << "Error!\n"
+            << e.getsName() << " is"
+            << " invalid!" << eMess ;
+            continue;
+        }
+        catch(Painting::ImpossibleStr e) {
+            std::cout << "Error!\n"
+            << e.getIStr() << eMess;
+            continue;
+        }
+        
         switch(flag) {
             case 1:
                 std::cout << "Input cust info.\n";
-                //call addCustomer(<vector>)
+                addCustomer(boats);
             break;
 
             case 2:
@@ -43,15 +77,20 @@ void menu(<Painting> boats) {
 
             case 4:
                 std::cout << "Print all contracts. With total at end.\n";
-                //print all contracts using print() function 
-                // & overloaded stream operator
+                printAll(boats);
             break;
 
             case 5:
                 std::cout << "Exiting program. Be well!\n";
                 flag = -1;
             break;
-        }
+
+            default:
+                std::cout << "Error! Entry is invalid.\n"
+                << "Please make a selection from the menu.\n";
+                flag = 0;
+            break;
+        }//end switch
 
     }//end while
 

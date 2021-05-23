@@ -11,11 +11,13 @@
 #include "Painting.h"
 #include <vector>
 
-void addCustomer(<Painting>);
+void addCustomer(std::vector<Painting>&);
 
-void editCustomer(<Painting>);
+void editCustomer(std::vector<Painting>);
 
-void findLargest(<Painting>);
+void findLargest(std::vector<Painting>);
+
+void printAll(std::vector<Painting>);
 
 
 #endif

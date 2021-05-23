@@ -552,14 +552,14 @@ Project_8/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_8.dir/build.make CMakeFiles/Project_8.dir/build
 .PHONY : Project_8/fast
 
-Painting.o: Painting.cpp.o
+Painting.obj: Painting.cpp.obj
 
-.PHONY : Painting.o
+.PHONY : Painting.obj
 
 # target to build an object file
-Painting.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_8.dir/build.make CMakeFiles/process-Project_8.dir/Painting.cpp.o
-.PHONY : Painting.cpp.o
+Painting.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_8.dir/build.make CMakeFiles/process-Project_8.dir/Painting.cpp.obj
+.PHONY : Painting.cpp.obj
 
 Painting.i: Painting.cpp.i
 
@@ -579,14 +579,14 @@ Painting.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_8.dir/build.make CMakeFiles/process-Project_8.dir/Painting.cpp.s
 .PHONY : Painting.cpp.s
 
-main.o: main.cpp.o
+main.obj: main.cpp.obj
 
-.PHONY : main.o
+.PHONY : main.obj
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_8.dir/build.make CMakeFiles/Project_8.dir/main.cpp.o
-.PHONY : main.cpp.o
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_8.dir/build.make CMakeFiles/Project_8.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
 main.i: main.cpp.i
 
@@ -605,6 +605,60 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Project_8.dir/build.make CMakeFiles/Project_8.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+menu.obj: menu.cpp.obj
+
+.PHONY : menu.obj
+
+# target to build an object file
+menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_8.dir/build.make CMakeFiles/process-Project_8.dir/menu.cpp.obj
+.PHONY : menu.cpp.obj
+
+menu.i: menu.cpp.i
+
+.PHONY : menu.i
+
+# target to preprocess a source file
+menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_8.dir/build.make CMakeFiles/process-Project_8.dir/menu.cpp.i
+.PHONY : menu.cpp.i
+
+menu.s: menu.cpp.s
+
+.PHONY : menu.s
+
+# target to generate assembly for a file
+menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_8.dir/build.make CMakeFiles/process-Project_8.dir/menu.cpp.s
+.PHONY : menu.cpp.s
+
+options.obj: options.cpp.obj
+
+.PHONY : options.obj
+
+# target to build an object file
+options.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_8.dir/build.make CMakeFiles/process-Project_8.dir/options.cpp.obj
+.PHONY : options.cpp.obj
+
+options.i: options.cpp.i
+
+.PHONY : options.i
+
+# target to preprocess a source file
+options.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_8.dir/build.make CMakeFiles/process-Project_8.dir/options.cpp.i
+.PHONY : options.cpp.i
+
+options.s: options.cpp.s
+
+.PHONY : options.s
+
+# target to generate assembly for a file
+options.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/process-Project_8.dir/build.make CMakeFiles/process-Project_8.dir/options.cpp.s
+.PHONY : options.cpp.s
 
 # Help Target
 help:
@@ -647,12 +701,18 @@ help:
 	@echo "... NightlyUpdate"
 	@echo "... Project_8"
 	@echo "... process-Project_8"
-	@echo "... Painting.o"
+	@echo "... Painting.obj"
 	@echo "... Painting.i"
 	@echo "... Painting.s"
-	@echo "... main.o"
+	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... menu.obj"
+	@echo "... menu.i"
+	@echo "... menu.s"
+	@echo "... options.obj"
+	@echo "... options.i"
+	@echo "... options.s"
 .PHONY : help
 
 

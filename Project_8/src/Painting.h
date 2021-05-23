@@ -52,6 +52,23 @@ class Painting {
             }
         }; //end BigString Exception class
 
+        //Exception class ImpossibleStr, for catching Impossible values 
+        //thrown by stof, stoi
+        class ImpossibleStr {
+            private:
+                std::string iStr;
+            
+            public:
+                //constructor
+                ImpossibleStr(std::string i) {
+                    iStr = i;
+                }
+                //getter
+                std::string getIStr() const {
+                    return iStr;
+                }
+        };//end Exception class ImpossibleStr
+
         //default constructor
         Painting();
 
@@ -78,6 +95,9 @@ class Painting {
 
         //print function
         void print() const;
+
+        float convertFloat(std::string);
+        int convertSingleInt(std::string);
 
         //getters
         std::string getName() const;
