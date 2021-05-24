@@ -195,10 +195,10 @@ std::ostream& operator<<(std::ostream& out, const Painting& obj) {
 }
 
 //*******************************************************
-// name: 
+// name: convertFloat
 // called by:
-// passed: 
-// returns: 
+// passed: std::string
+// returns: float
 // The 'name' function 'what function does'             *
 //*******************************************************
 float Painting::convertFloat(std::string num) {
@@ -224,6 +224,13 @@ float Painting::convertFloat(std::string num) {
     return fNum;
 }//end convertFloat
 
+//*******************************************************
+// name: convertSingleInt
+// called by:
+// passed: std::string
+// returns: int
+// The 'name' function 'what function does'             *
+//*******************************************************
 int Painting::convertSingleInt(std::string num) {
     int choice;
 
@@ -251,6 +258,14 @@ int Painting::convertSingleInt(std::string num) {
     return choice;
 }//end convertSingleInt
 
+//*******************************************************
+// name: print
+// called by:
+// passed: nothing
+// returns: nothing
+// The print member function prints a Painting object   *
+// using the overloaded << operator and iomanip library *
+//*******************************************************
 void Painting::print() const {
 
     std::cout << std::fixed 

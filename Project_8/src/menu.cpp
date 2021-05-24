@@ -72,7 +72,7 @@ void menu(std::vector<Painting> boats) {
 
             case 3:
                 std::cout << "Find largest contract.\n";
-                //call findLargest(<vector>)
+                findLargest(boats);
             break;
 
             case 4:
@@ -87,7 +87,7 @@ void menu(std::vector<Painting> boats) {
 
             default:
                 std::cout << "Error! Entry is invalid.\n"
-                << "Please make a selection from the menu.\n";
+                << eMess;
                 flag = 0;
             break;
         }//end switch

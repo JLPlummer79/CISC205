@@ -39,7 +39,7 @@ class Painting {
                 }
         }; //end negativeValue Exception class
 
-        //Exception class BigString, for strings over 15 char throws
+        //Exception class BigString, for string throws
         class BigString{
             private:
                 std::string sName;

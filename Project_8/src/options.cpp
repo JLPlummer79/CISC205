@@ -144,10 +144,13 @@ void printAll(std::vector<Painting> boats) {
     Painting shell;
 
     for(int i = 0; i < boats.size(); ++i) {
+        //prints each entry
         boats[i].print();
-
+        
+        //overloaded addition of Painting objects
         total = shell + boats[i];
 
+        //makes sure that shell has the running total
         shell.setContract(total);     
     }
 
@@ -178,7 +181,10 @@ int editCustomerMenu() {
         std::cout << "5. Back to Main Menu\n";
         std::cout << "----------------------------------------\n\n";
         
+        //get user inpup
         std::getline(std::cin, input);
+
+        //making sure entry is valid
         try{
             flag = blank.convertSingleInt(input);
         }
@@ -198,7 +204,7 @@ int editCustomerMenu() {
             << e.getIStr() << eMess;
             continue;
         }
-        
+        //returns a valid entry, or prompts user to try again.
         switch(flag) {
             case 1: 
             case 2: 
@@ -234,6 +240,13 @@ int matchCustomer(std::vector<Painting>& boats, const std::string name) {
     return index;
 }
 
+//*******************************************************
+// name: editCustomer
+// called by:
+// passed: std::vector<Painting>&
+// returns: nothing
+// The 'name' function 'what function does'             *
+//*******************************************************
 void editCustomer(std::vector<Painting>& boats) {
     std::string customer,entry;
     int index = -1;
@@ -356,6 +369,25 @@ void editCustomer(std::vector<Painting>& boats) {
     }//end while
 
 }//end editCustomer
+
+//*******************************************************
+// name: findLargest
+// called by: menu
+// passed: std::vector<Painting>&
+// returns: nothing
+// The 'name' function 'what function does'             *
+//*******************************************************
+void findLargest(std::vector<Painting>& boats) {
+    Painting largest = boats[0];
+
+    for(int j = 0; j < boats.size(); ++j) {
+        if(boats[j] > largest) {
+            largest = boats[j];
+        }
+    }
+    largest.print();
+
+}
 
 //*******************************************************
 // name: 
