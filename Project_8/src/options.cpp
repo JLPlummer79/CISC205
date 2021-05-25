@@ -16,7 +16,14 @@
 // called by: menu
 // passed: std::vector<Painting>&
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The addCustomer function prompts the user to enter   *
+// data and checks the entries using try/catch blocks.  *
+// While loops control the flow of the program, when the*
+// user entry is invalid, the loop continues. When the  *
+// entry is valid, the loop is exited, and the user     *
+// continues the data entry process. When that process  *
+// is finished, the newly created object is added to the*
+// vector.                                              *
 //*******************************************************
 void addCustomer(std::vector<Painting>& boats) {
     std::string input;
@@ -26,9 +33,12 @@ void addCustomer(std::vector<Painting>& boats) {
 
     while(tryAgain) {
 
+        //prompt user and get the input
         std::cout << "Enter customer name, up to 15 characters: ";
         std::getline(std::cin, input);
 
+        //error checking try/catch blocks if try executes, name is set, while exited
+        //if setName throws, an error message is printed, while continues
         try{
             boat.setName(input);
             tryAgain = false;
@@ -44,6 +54,7 @@ void addCustomer(std::vector<Painting>& boats) {
             << "\n";
         }
     }//end while
+
     tryAgain = true;
     while(tryAgain) {
         std::cout << "Enter boat name, up to 15 characters: ";

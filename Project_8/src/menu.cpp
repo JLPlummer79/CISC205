@@ -16,7 +16,10 @@
 // called by: main
 // passed: std::vector<Painting>
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The menu function prints the menu for the user to    *
+// interact with. User entry is processed (error        *
+// checking and conversion) then functions to perform   *
+// the other actions are called.                        *
 //*******************************************************
 
 void menu(std::vector<Painting> boats) {
@@ -24,21 +27,20 @@ void menu(std::vector<Painting> boats) {
     std::string input;
     int flag = 0;
     Painting shell;
-    //this may be better in Painting.h to share amongst all the programs
-    //const std::string eMess = " Please select a choice from the menu.\n";
 
+    
     while(flag != -1) {
         std::cout << "\n\n              Main Menu\n";
         std::cout << "----------------------------------------\n";
         std::cout << "1. Input a customer's information\n";
         std::cout << "2. Edit a customer's information\n";
-        std::cout << "3. Search for contract by value\n";
+        std::cout << "3. Find Largest Contract\n";
         std::cout << "4. Display all contract information\n";
         std::cout << "5. Exit\n";
         std::cout << "----------------------------------------\n\n";
         std::getline(std::cin,input);
 
-        //shell needs to call convertSingleInt
+        //perform error checking and str->int conversion try/catch block to handle errors
         try{
             flag = shell.convertSingleInt(input);
         }
@@ -59,6 +61,7 @@ void menu(std::vector<Painting> boats) {
             continue;
         }
         
+        //handles cases when try block executes as expected
         switch(flag) {
             case 1:
                 std::cout << "Input cust info.\n";
