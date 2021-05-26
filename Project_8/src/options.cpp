@@ -146,7 +146,9 @@ void addCustomer(std::vector<Painting>& boats) {
 // called by: menu
 // passed: std::vector<Painting>
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The printAll function prints all the contents of the *
+// vector passed to it as well as totaling the contract *
+// values and printing them at the end.                 *
 //*******************************************************
 void printAll(std::vector<Painting> boats) {
     //holds total
@@ -171,7 +173,7 @@ void printAll(std::vector<Painting> boats) {
 
 //*******************************************************
 // name: editCustomerMenu
-// called by:
+// called by: 
 // passed: nothing
 // returns: int
 // The 'name' function 'what function does'             *
@@ -253,10 +255,18 @@ int matchCustomer(std::vector<Painting>& boats, const std::string name) {
 
 //*******************************************************
 // name: editCustomer
-// called by:
+// called by: menu
 // passed: std::vector<Painting>&
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The editCustomer function prompts the user to enter  *
+// the customer name they want to edit, searches for the*
+// name; prints and error message if not found, starting*
+// while loop again. If found, a function is called that*
+// prints a menu prompting the user to enter a choice of*
+// what to edit. That choice is again error checked and *
+// returned. That is filtered through a switch, prompts *
+// the user to enter the new data. That is error checked*
+// then the object (in the vector) is updated.          *
 //*******************************************************
 void editCustomer(std::vector<Painting>& boats) {
     std::string customer,entry;
@@ -386,7 +396,13 @@ void editCustomer(std::vector<Painting>& boats) {
 // called by: menu
 // passed: std::vector<Painting>&
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The findLargest function takes the arg and 1st sets a*
+// Painting object (largest) to the first element. 2nd  *
+// the vector is iterated over comparing each element to*
+// largest. When the overloaded operator > returns true *
+// largest is assigned the value of boats[j]. Once the  *
+// loop finishes, the member function print is called,  *
+// printing the largest Painting object in the arg.     *
 //*******************************************************
 void findLargest(std::vector<Painting>& boats) {
     Painting largest = boats[0];
