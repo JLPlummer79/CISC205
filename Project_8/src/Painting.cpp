@@ -79,10 +79,11 @@ bool Painting::operator>(const Painting &rhs) {
 
 //*******************************************************
 // name: getName
-// called by:
+// called by: matchCustomer, overloaded stream insertion
+// called by: operator << 
 // passed: nothing
 // returns: std::string
-// The 'name' function 'what function does'             *
+// The getName function returns the member variable name*
 //*******************************************************
 std::string Painting::getName() const {
     return name;
@@ -90,10 +91,11 @@ std::string Painting::getName() const {
 
 //*******************************************************
 // name: getBoatName
-// called by:
+// called by: overloaded stream insertion operator <<
 // passed: nothing
 // returns: std::string
-// The 'name' function 'what function does'             *
+// The getBoatName function returns the member variable *
+// boatName.                                            *
 //*******************************************************
 std::string Painting::getBoatName() const {
     return boatName;
