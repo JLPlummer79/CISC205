@@ -173,10 +173,17 @@ void printAll(std::vector<Painting> boats) {
 
 //*******************************************************
 // name: editCustomerMenu
-// called by: 
+// called by: editCustomer
 // passed: nothing
 // returns: int
-// The 'name' function 'what function does'             *
+// The editCustomerMenu function prints a menu that     *
+// prompts the user to choose which field to enter. The *
+// entry is error checked, then filtered with a switch. *
+// If the entry is valid, it is returned, or the menu is*
+// exited, or the user is prompted to enter a relavant  *
+// choice. If the entry is invalid, try/catch handles   *
+// error, prints a message, and the user is returned to *
+// the beginning of the menu.                           *
 //*******************************************************
 int editCustomerMenu() {
     int flag = 0;
@@ -238,10 +245,17 @@ int editCustomerMenu() {
 
 //*******************************************************
 // name: matchCustomer
-// called by:
+// called by: editCustomer
 // passed: std::vector<Painting>&, const std::string
 // returns: int
-// The 'name' function 'what function does'             *
+// The matchCustomer function takes 2 args, a vector and*
+// a const std::string. The vector is iterated through, *
+// comparing the name from each boat object to the name *
+// arg. It is trying to find the index that matches the *
+// user entry of which customer to edit data for. If a  *
+// match is found, the variable index is set to j, then *
+// returned. If no match is found, index is returned as *
+// -1, which is handled in the calling function.        *
 //*******************************************************
 int matchCustomer(std::vector<Painting>& boats, const std::string name) {
     int index = -1;
@@ -277,6 +291,7 @@ void editCustomer(std::vector<Painting>& boats) {
     Painting boat;
     
     while(flag != -1) {
+        //prompt user for entry and get entry
         std::cout << "\nEnter customer name you wish to edit: ";
         std::getline(std::cin, customer);
         
@@ -286,9 +301,10 @@ void editCustomer(std::vector<Painting>& boats) {
             std::cout << "\nCustomer not found!\n";
             continue;
         }
-        
+        //get the user choice for which field to enter
         field = editCustomerMenu();
 
+        //filter user choice, error check entry
         switch(field){
             case 0:
                 flag = -1;   
