@@ -83,7 +83,8 @@ bool Painting::operator>(const Painting &rhs) {
 // called by: operator << 
 // passed: nothing
 // returns: std::string
-// The getName function returns the member variable name*
+// The getName function returns the value of the member *
+// variable name                                        *
 //*******************************************************
 std::string Painting::getName() const {
     return name;
@@ -94,8 +95,8 @@ std::string Painting::getName() const {
 // called by: overloaded stream insertion operator <<
 // passed: nothing
 // returns: std::string
-// The getBoatName function returns the member variable *
-// boatName.                                            *
+// The getBoatName function returns the value of the    *
+// member variable boatName.                            *
 //*******************************************************
 std::string Painting::getBoatName() const {
     return boatName;
@@ -103,10 +104,13 @@ std::string Painting::getBoatName() const {
 
 //*******************************************************
 // name: getContract
-// called by:
+// called by: overloaded stream insertion operator <<, 
+// called by: overloaded + operator, overloaded > 
+// called by: operator
 // passed: nothing
 // returns: float
-// The 'name' function 'what function does'             *
+// The getContract function returns the value of the    *
+// member variable contract.*
 //*******************************************************
 float Painting::getContract() const {
     return contract;
@@ -114,10 +118,11 @@ float Painting::getContract() const {
 
 //*******************************************************
 // name: getPaidToDate
-// called by: 
+// called by: overloaded stream insertion operator <<
 // passed: nothing
 // returns: float
-// The 'name' function 'what function does'             *
+// The getPaidToDate function returns the value of the  *
+// member variable paidToDate                           *
 //*******************************************************
 float Painting::getPaidToDate() const {
     return paidToDate;
@@ -125,10 +130,15 @@ float Painting::getPaidToDate() const {
 
 //*******************************************************
 // name: setName
-// called by:
+// called by: addCustomer, editCustomer
 // passed: std::string
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The setName function takes a std::string as an arg.  *
+// It checks the following conditions 1) Is the arg     *
+// empty? 2) Is the arg greater than 15 chars in length?*
+// When either of these things are true it throws. If   *
+// these two conditons are false, then the member var   *
+// name is set to the arg.                              * 
 //*******************************************************
 void Painting::setName(std::string c) {
     if(c.empty()) {
@@ -143,10 +153,15 @@ void Painting::setName(std::string c) {
 
 //*******************************************************
 // name: setBoatName
-// called by:
+// called by: addCustomer, editCustomer
 // passed: std::string
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The setBoatName function takes a std::string as an   *
+// arg. It checks the following conditions 1) Is the arg*
+// empty? 2) Is the arg greater than 15 chars in length?*
+// When either of these conditions are true, it throws. *
+// If these two conditions are false, then the member   *
+// var boatName is set to the arg.                      *
 //*******************************************************
 void Painting::setBoatName(std::string b) {
     if(b.empty()) {
@@ -161,10 +176,13 @@ void Painting::setBoatName(std::string b) {
 
 //*******************************************************
 // name: setContract
-// called by:
+// called by: addCustomer, editCustomer, printAll
 // passed: float
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The setContract function takes a float as an arg. It *
+// then checks the condition is the arg less than 0? If *
+// it is then it throws. If the condition is met, then  *
+// the member var contract is set to the arg.           *
 //*******************************************************
 void Painting::setContract(float con) {
     if(con < 0.0) {
@@ -176,10 +194,13 @@ void Painting::setContract(float con) {
 
 //*******************************************************
 // name: setPaidToDate
-// called by:
+// called by: addCustomer, editCustomer
 // passed: float
 // returns: nothing
-// The 'name' function 'what function does'             *
+// The setPaidToDate function takes a float as an arg.  *
+// If the condition of arg being greater than 0 is not  *
+// met, it throws. If the condition is met, then the    *
+// member var paidToDate is set to the arg.             *
 //*******************************************************
 void Painting::setPaidToDate(float ptd) {
     if(ptd < 0.0) {
@@ -198,10 +219,18 @@ std::ostream& operator<<(std::ostream& out, const Painting& obj) {
 
 //*******************************************************
 // name: convertFloat
-// called by:
+// called by: addCustomer, editCustomer
 // passed: std::string
 // returns: float
-// The 'name' function 'what function does'             *
+// The convertFloat function takes a std::string arg. It*
+// then checks if the arg is empty. If it is it throws. *
+// If the arg is not empty then it tries to convert the *
+// arg to a float. There are two catch blocks for the   *
+// two errors that stof can throw, if either of those   *
+// execute and error message is printed, followed by a  *
+// second throw that the calling object & function will *
+// catch. When the conversion is successful, then a     *
+// float is returned.                                   *
 //*******************************************************
 float Painting::convertFloat(std::string num) {
     float fNum;
