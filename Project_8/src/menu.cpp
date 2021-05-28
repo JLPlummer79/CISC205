@@ -64,27 +64,22 @@ void menu(std::vector<Painting> boats) {
         //handles cases when try block executes as expected
         switch(flag) {
             case 1:
-                std::cout << "Input cust info.\n";
                 addCustomer(boats);
             break;
 
             case 2:
-                std::cout << "Edit a customer's info.\n";
                 editCustomer(boats);
             break;
 
             case 3:
-                std::cout << "Find largest contract.\n";
                 findLargest(boats);
             break;
 
             case 4:
-                std::cout << "Print all contracts. With total at end.\n";
                 printAll(boats);
             break;
 
             case 5:
-                std::cout << "Exiting program. Be well!\n";
                 flag = -1;
             break;
 

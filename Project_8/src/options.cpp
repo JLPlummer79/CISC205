@@ -134,7 +134,6 @@ void addCustomer(std::vector<Painting>& boats) {
             std::cout << "\nError! " << 
             e.getValue() << " is invalid!\n";
         }
-        //do we need to compare paidToDate and contract? error thrown if they paid too much?
     }//end while
 
     boats.push_back(boat);
