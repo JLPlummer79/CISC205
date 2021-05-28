@@ -227,7 +227,7 @@ std::ostream& operator<<(std::ostream& out, const Painting& obj) {
 // If the arg is not empty then it tries to convert the *
 // arg to a float. There are two catch blocks for the   *
 // two errors that stof can throw, if either of those   *
-// execute and error message is printed, followed by a  *
+// execute an error message is printed, followed by a  *
 // second throw that the calling object & function will *
 // catch. When the conversion is successful, then a     *
 // float is returned.                                   *
@@ -257,10 +257,19 @@ float Painting::convertFloat(std::string num) {
 
 //*******************************************************
 // name: convertSingleInt
-// called by:
+// called by: menu, editCustomerMenu
 // passed: std::string
 // returns: int
-// The 'name' function 'what function does'             *
+// The convertSingleInt function takes a std::string arg*
+// It checks for 1) is the arg empty? 2) Does the arg   *
+// have a length greater than 1? If either of these     *
+// conditions are true, it throws. If these conditions  *
+// are false, then the function tries to convert the arg*
+// to a int. There are two catch blocks for the two     *
+// errors stoi can throw. If either of those execute, an*
+// error message is printed and a second throw is made, *
+// caught by the calling function. When the conversion  *
+// is successful, an int is returned.                   *
 //*******************************************************
 int Painting::convertSingleInt(std::string num) {
     int choice;
@@ -291,7 +300,7 @@ int Painting::convertSingleInt(std::string num) {
 
 //*******************************************************
 // name: print
-// called by:
+// called by: printAll, findLargest
 // passed: nothing
 // returns: nothing
 // The print member function prints a Painting object   *
