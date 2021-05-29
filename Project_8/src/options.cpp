@@ -155,19 +155,24 @@ void printAll(std::vector<Painting> boats) {
     //holds running total for overloaded adding
     Painting shell;
 
-    for(int i = 0; i < boats.size(); ++i) {
-        //prints each entry
-        boats[i].print();
-        
-        //overloaded addition of Painting objects
-        total = shell + boats[i];
-
-        //makes sure that shell has the running total
-        shell.setContract(total);     
+    if(boats.size() == 0) {
+        std::cout << "No contracts in inventory!\n";
     }
+    else {
+        for(int i = 0; i < boats.size(); ++i) {
+            //prints each entry
+            boats[i].print();
+            
+            //overloaded addition of Painting objects
+            total = shell + boats[i];
 
-    //rough draft. Read specs
-    std::cout << "\nTotal: " << total << '\n';
+            //makes sure that shell has the running total
+            shell.setContract(total);     
+        }
+
+        //print contracts total
+        std::cout << "\nTotal: " << total << '\n';
+    }
 }//end printAll
 
 //*******************************************************
@@ -284,10 +289,18 @@ int matchCustomer(std::vector<Painting>& boats, const std::string name) {
 void editCustomer(std::vector<Painting>& boats) {
     std::string customer,entry;
     int index = -1;
-    int flag = 1;
+    int flag;
     int field;
     float value;
     Painting boat;
+
+    if(boats.size() == 0) {
+        flag = -1;
+        std::cout << "No contracts in inventory!\n";
+    }
+    else {
+        flag = 1;
+    }
     
     while(flag != -1) {
         //prompt user for entry and get entry
@@ -420,14 +433,19 @@ void editCustomer(std::vector<Painting>& boats) {
 // printing the largest Painting object in the arg.     *
 //*******************************************************
 void findLargest(std::vector<Painting>& boats) {
-    Painting largest = boats[0];
-
-    for(int j = 0; j < boats.size(); ++j) {
-        if(boats[j] > largest) {
-            largest = boats[j];
-        }
+    if(boats.size() == 0) {
+        std::cout << "No boats in inventory!\n";
     }
-    largest.print();
+    else {
+        Painting largest = boats[0];
+
+        for(int j = 0; j < boats.size(); ++j) {
+            if(boats[j] > largest) {
+                largest = boats[j];
+            }
+        }
+        largest.print();
+    }
 
 }
 
