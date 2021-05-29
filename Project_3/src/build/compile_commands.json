@@ -1,0 +1,27 @@
+[
+{
+  "directory": "C:/Users/bfant/CISC205/Project_3/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/process-Project_3.dir/menu.cpp.o -c C:/Users/bfant/CISC205/Project_3/src/menu.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_3/src/menu.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_3/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/process-Project_3.dir/error.cpp.o -c C:/Users/bfant/CISC205/Project_3/src/error.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_3/src/error.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_3/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/process-Project_3.dir/options.cpp.o -c C:/Users/bfant/CISC205/Project_3/src/options.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_3/src/options.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_3/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/process-Project_3.dir/display.cpp.o -c C:/Users/bfant/CISC205/Project_3/src/display.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_3/src/display.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_3/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/Project_3.dir/main.cpp.o -c C:/Users/bfant/CISC205/Project_3/src/main.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_3/src/main.cpp"
+}
+]

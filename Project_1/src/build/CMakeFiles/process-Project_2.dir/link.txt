@@ -1,0 +1,2 @@
+C:/cygwin64/bin/ar.exe qc libprocess-Project_2.a CMakeFiles/process-Project_2.dir/display.cpp.o CMakeFiles/process-Project_2.dir/test.cpp.o CMakeFiles/process-Project_2.dir/modify.cpp.o CMakeFiles/process-Project_2.dir/sort.cpp.o
+C:/cygwin64/bin/ranlib.exe libprocess-Project_2.a

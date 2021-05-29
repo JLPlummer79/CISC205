@@ -23,23 +23,15 @@ vector
 -
 string
 -
+iostream
+-
+iomanip
+-
 
 C:/Users/bfant/CISC205/Project_8/src/menu.h
 Painting.h
 C:/Users/bfant/CISC205/Project_8/src/Painting.h
 vector
--
-
-C:/Users/bfant/CISC205/Project_8/src/options.cpp
-options.h
-C:/Users/bfant/CISC205/Project_8/src/options.h
-Painting.h
-C:/Users/bfant/CISC205/Project_8/src/Painting.h
-vector
--
-iostream
--
-string
 -
 
 C:/Users/bfant/CISC205/Project_8/src/options.h

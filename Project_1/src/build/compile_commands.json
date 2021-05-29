@@ -1,0 +1,27 @@
+[
+{
+  "directory": "C:/Users/bfant/CISC205/Project_1/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/process-Project_2.dir/display.cpp.o -c C:/Users/bfant/CISC205/Project_1/src/display.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_1/src/display.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_1/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/process-Project_2.dir/test.cpp.o -c C:/Users/bfant/CISC205/Project_1/src/test.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_1/src/test.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_1/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/process-Project_2.dir/modify.cpp.o -c C:/Users/bfant/CISC205/Project_1/src/modify.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_1/src/modify.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_1/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/process-Project_2.dir/sort.cpp.o -c C:/Users/bfant/CISC205/Project_1/src/sort.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_1/src/sort.cpp"
+},
+{
+  "directory": "C:/Users/bfant/CISC205/Project_1/src/build",
+  "command": "C:/cygwin64/bin/g++.exe   -g -o CMakeFiles/Project_2.dir/main.cpp.o -c C:/Users/bfant/CISC205/Project_1/src/main.cpp",
+  "file": "C:/Users/bfant/CISC205/Project_1/src/main.cpp"
+}
+]

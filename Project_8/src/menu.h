@@ -13,6 +13,7 @@
 
 void menu(std::vector<Painting>);
 
+void header();
 
 
 #endif

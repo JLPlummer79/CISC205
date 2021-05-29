@@ -10,6 +10,8 @@
 #include "Painting.h"
 #include <vector>
 #include <string>
+#include <iostream>
+#include <iomanip>
 
 //*******************************************************
 // name: menu
@@ -28,7 +30,8 @@ void menu(std::vector<Painting> boats) {
     int flag = 0;
     Painting shell;
 
-    
+    header();
+
     while(flag != -1) {
         std::cout << "\n\n              Main Menu\n";
         std::cout << "----------------------------------------\n";
@@ -72,10 +75,12 @@ void menu(std::vector<Painting> boats) {
             break;
 
             case 3:
+                header();
                 findLargest(boats);
             break;
 
             case 4:
+                header();
                 printAll(boats);
             break;
 
@@ -93,3 +98,17 @@ void menu(std::vector<Painting> boats) {
     }//end while
 
 }//end menu
+
+//*******************************************************
+// name: header
+// called by: menu
+// passed: nothing
+// returns: nothing
+// The header function prints the company header        *
+//*******************************************************
+void header() {
+     std::cout << "\n\n\n";
+    std::cout << "******************************\n\n";
+    std::cout << std::setw(15) << "Ivo's Yacht Painting Company\n\n";
+    std::cout << "******************************\n\n\n";
+}

@@ -1,0 +1,2 @@
+C:/cygwin64/bin/ar.exe qc libprocess-Project_3.a CMakeFiles/process-Project_3.dir/menu.cpp.o CMakeFiles/process-Project_3.dir/error.cpp.o CMakeFiles/process-Project_3.dir/options.cpp.o CMakeFiles/process-Project_3.dir/display.cpp.o
+C:/cygwin64/bin/ranlib.exe libprocess-Project_3.a

@@ -21,13 +21,13 @@ Painting::Painting() {
 
 //move constructor
 Painting::Painting(Painting &&other) noexcept{
-    std::cout << "move constructor\n";
+    //std::cout << "move constructor\n";
     *this = std::move(other);
 }
 
 //move assignment operator
 Painting& Painting::operator=(Painting &&other) noexcept{
-    std::cout << "move assignment\n";
+    //std::cout << "move assignment\n";
     name = std::move(other.name);
     boatName = std::move(other.boatName);
     contract = std::move(other.contract);
@@ -38,7 +38,7 @@ Painting& Painting::operator=(Painting &&other) noexcept{
 
 //copy consructor
 Painting::Painting(const Painting& other) {
-    std::cout << "copy constructor\n";
+    //std::cout << "copy constructor\n";
     name = other.name;
     boatName = other.boatName;
     contract = other.contract;
@@ -47,15 +47,11 @@ Painting::Painting(const Painting& other) {
 
 //copy assingment
 Painting& Painting::operator=(const Painting &other) {
-    std::cout << "copy assignment\n";
+    //std::cout << "copy assignment\n";
     name = other.name;
-    //this->setName(other.getName());
     boatName = other.boatName;
-    //this->setboatName(other.getBoatName());
     contract = other.contract;
-    //this->setContract(other.getContract());
     paidToDate = other.paidToDate;
-    //this->setPaidToDate(other.getPaidToDate());
 
     return *this;
 }

@@ -1,0 +1,32 @@
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/bfant/CISC205/Project_3/src/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Strawberry/c/bin/gmake.exe cmTC_2e7fe/fast && C:/Strawberry/c/bin/gmake.exe  -f CMakeFiles/cmTC_2e7fe.dir/build.make CMakeFiles/cmTC_2e7fe.dir/build
+gmake.exe[1]: Entering directory 'C:/Users/bfant/CISC205/Project_3/src/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2e7fe.dir/CMakeCCompilerABI.c.obj
+C:/cygwin64/bin/gcc.exe   -v -o CMakeFiles/cmTC_2e7fe.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.19/Modules/CMakeCCompilerABI.c"
+/usr/bin/sh: -c: line 0: syntax error near unexpected token `('
+/usr/bin/sh: -c: line 0: `C:/cygwin64/bin/gcc.exe   -v -o CMakeFiles/cmTC_2e7fe.dir/CMakeCCompilerABI.c.obj -c \C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.19/Modules/CMakeCCompilerABI.c\\'
+gmake.exe[1]: *** [CMakeFiles/cmTC_2e7fe.dir/build.make:85: CMakeFiles/cmTC_2e7fe.dir/CMakeCCompilerABI.c.obj] Error 1
+gmake.exe[1]: Leaving directory 'C:/Users/bfant/CISC205/Project_3/src/build/CMakeFiles/CMakeTmp'
+gmake.exe: *** [Makefile:140: cmTC_2e7fe/fast] Error 2
+
+
+
+
+Detecting CXX compiler ABI info failed to compile with the following output:
+Change Dir: C:/Users/bfant/CISC205/Project_3/src/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/Strawberry/c/bin/gmake.exe cmTC_11b31/fast && C:/Strawberry/c/bin/gmake.exe  -f CMakeFiles/cmTC_11b31.dir/build.make CMakeFiles/cmTC_11b31.dir/build
+gmake.exe[1]: Entering directory 'C:/Users/bfant/CISC205/Project_3/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_11b31.dir/CMakeCXXCompilerABI.cpp.o
+C:/cygwin64/bin/g++.exe   -v -o CMakeFiles/cmTC_11b31.dir/CMakeCXXCompilerABI.cpp.o -c "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.19/Modules/CMakeCXXCompilerABI.cpp"
+/usr/bin/sh: -c: line 0: syntax error near unexpected token `('
+/usr/bin/sh: -c: line 0: `C:/cygwin64/bin/g++.exe   -v -o CMakeFiles/cmTC_11b31.dir/CMakeCXXCompilerABI.cpp.o -c \C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.19/Modules/CMakeCXXCompilerABI.cpp\\'
+gmake.exe[1]: *** [CMakeFiles/cmTC_11b31.dir/build.make:85: CMakeFiles/cmTC_11b31.dir/CMakeCXXCompilerABI.cpp.o] Error 1
+gmake.exe[1]: Leaving directory 'C:/Users/bfant/CISC205/Project_3/src/build/CMakeFiles/CMakeTmp'
+gmake.exe: *** [Makefile:140: cmTC_11b31/fast] Error 2
+
+
+
+
